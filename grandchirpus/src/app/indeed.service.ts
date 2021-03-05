@@ -16,6 +16,7 @@ interface JobSearch {
 export class IndeedService {
 
   public jobsList: JobSearch[] = [];
+  jobs : any [] = [];
   userID = "vDMCdyYaOSf6Ytb";
   tokenKey = "dJANrAPBguLXOcJzBSNLBKrqqiKt4O6PKwbd4Z33EedMhEBZnU4vxtbysDraVqWcOF3EeRMYjuxc7kaqsC+x8Q==";
   url = "https://api.careeronestop.org/v1/jobsearch/";
@@ -40,15 +41,15 @@ export class IndeedService {
       (response: any) => {
 
         console.log(response);
-        const jobs = response;
+        this.jobs = response.Jobs;
 
-        for(let job of jobs){
+        for(let job of this.jobs){
           const jobResults : JobSearch ={
-          JvID: job.Jobs[0].JvId,
-          jobTitle: job.Jobs[0].JobTitle,
-          location: job.Jobs[0].Location,
-          company: job.Jobs[0].Company,
-          url: job.Jobs[0].URL
+          JvID: job.JvId,
+          jobTitle: job.JobTitle,
+          location: job.Location,
+          company: job.Company,
+          url: job.URL
         }
 
         this.jobsList.push(jobResults);
