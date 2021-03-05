@@ -2,7 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 interface JobSearch {
+  JvID: string;
   jobTitle: string;
+  location: string;
+  company: string;
+  url: string;
+ 
 }
 
 @Injectable({
@@ -21,7 +26,7 @@ export class IndeedService {
   // const days = 0;
   // const sortColumns = 0;
   // const sortOrder = 0;
-  // const startRecord = 0; 
+  // const startRow = 0; 
   // const pageSize = 10; 
 
   constructor(private http: HttpClient) { }
@@ -35,7 +40,20 @@ export class IndeedService {
       (response: any) => {
 
         console.log(response);
+        const jobs = response;
 
+        for(let job of jobs){
+          const jobResults : JobSearch ={
+          JvID: job.Jobs[0].JvId,
+          jobTitle: job.Jobs[0].JobTitle,
+          location: job.Jobs[0].Location,
+          company: job.Jobs[0].Company,
+          url: job.Jobs[0].URL
+        }
+
+        this.jobsList.push(jobResults);
+      }
+      console.log(this.jobsList);
       },
       (error) => {
         console.error(error);
