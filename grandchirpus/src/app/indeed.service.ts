@@ -26,24 +26,21 @@ export class IndeedService {
   userID = "vDMCdyYaOSf6Ytb";
   tokenKey = "dJANrAPBguLXOcJzBSNLBKrqqiKt4O6PKwbd4Z33EedMhEBZnU4vxtbysDraVqWcOF3EeRMYjuxc7kaqsC+x8Q==";
   url = "https://api.careeronestop.org/v1/jobsearch/";
-  
-  //placeholders for the required fields in the API URL
-  // const keyword = "developer";
-  // const location = "United States";
-  // const radius = 25;
-  // const days = 0;
-  // const sortColumns = 0;
-  // const sortOrder = 0;
-  // const startRow = 0; 
-  // const pageSize = 10; 
 
+  //required fields for the API URL that are set to default values
+  days:number = 0;
+  sortColumns:string = '0';
+  sortOrder:string = '0';
+  startRow:number = 0; 
+  pageSize:number = 50; 
+  
   constructor(private http: HttpClient) { }
   
   //function to pull in API information
-  getJobs() {
+  getJobs(keyword:string, jobLocation:string, jobRadius:string) {
 
     //sets requestUrl by calling the getUrlWithAPIKey function to set the full API url
-    const requestUrl = this.getUrlWithAPIKey();
+    const requestUrl = this.getUrlWithAPIKey() + '/' + keyword +'/' + jobLocation + '/' + jobRadius + '/' +  '/'+ this.sortColumns + '/'+ this.sortOrder + '/'+ this.startRow + '/'+ this.pageSize +'/' + this.days;
 
     //http method to call the API with the header authorization
     this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
@@ -68,7 +65,7 @@ export class IndeedService {
         this.jobsList.push(jobResults);
       }
 
-      //console.log(this.jobsList);
+      console.log(this.jobsList);
       },
       (error) => {
         console.error(error);
@@ -78,7 +75,7 @@ export class IndeedService {
   }
   //function to return the full API URL with the required fields
   getUrlWithAPIKey() {
-    return `${this.url}${this.userID}/developer/United States/25/0/0/0/10/0`;
+    return `${this.url}${this.userID}`;
   }
     
   }

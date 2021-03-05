@@ -9,11 +9,11 @@ import { IndeedService } from './indeed.service';
 export class AppComponent {
   title = 'grandchirpus';
 
-  constructor(public IndeedService: IndeedService) {}
+  // constructor(public IndeedService: IndeedService) {}
 
-  ngOnInit(){
-      this.IndeedService.getJobs();
-  }
+  // ngOnInit(){
+  //     this.IndeedService.getJobs();
+  // }
 }
 
 

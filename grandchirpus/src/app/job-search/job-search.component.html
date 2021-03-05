@@ -1,0 +1,13 @@
+<body>
+    <p>Ready for your next job?</p>
+        
+    <div class = "searchFields">
+        <input type="text" placeholder="keyword" name="keyword" [(ngModel)]="keyword" />
+        <input type = "text" placeholder="state (VA) or zipcode (20191)" name = "jobLocation" [(ngModel)]="jobLocation" />
+        <input type ="dropdown" placeholder="Radius" name = "jobRadius" [(ngModel)]="jobRadius" />
+    </div>
+    <div class ="center-button">
+        <button (click)="getJobResults()">Submit</button> 
+    </div>
+    
+</body>
