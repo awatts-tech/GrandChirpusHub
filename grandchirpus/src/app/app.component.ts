@@ -8,6 +8,9 @@ import { IndeedService } from './indeed.service';
 })
 export class AppComponent {
   title = 'grandchirpus';
+  myimage:string = "assets/img/Grantchirpus-logo.PNG";
+
+
 
   // constructor(public IndeedService: IndeedService) {}
 
