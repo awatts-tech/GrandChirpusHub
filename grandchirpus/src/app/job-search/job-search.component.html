@@ -1,13 +1,21 @@
 <body>
-    <p>Ready for your next job?</p>
+    <h1>Ready for your next <span>career</span>?</h1>
         
     <div class = "searchFields">
-        <input type="text" placeholder="keyword" name="keyword" [(ngModel)]="keyword" />
-        <input type = "text" placeholder="state (VA) or zipcode (20191)" name = "jobLocation" [(ngModel)]="jobLocation" />
-        <input type ="dropdown" placeholder="Radius" name = "jobRadius" [(ngModel)]="jobRadius" />
+        <div class = "row g-3">
+            <div class="col"> 
+            <input type="text" placeholder="keyword" name="Keyword" [(ngModel)]="keyword"  class="form-control"/>
+            </div>
+            <div class="col">
+            <input type = "text" placeholder="State (VA) or Zipcode (20191)" name = "jobLocation" [(ngModel)]="jobLocation" class="form-control" />
+            </div>
+            <div class="col">
+            <input type ="dropdown" placeholder="Radius" name = "jobRadius" [(ngModel)]="jobRadius" class="form-control"/>
+            </div>
+        </div>
     </div>
     <div class ="center-button">
-        <button (click)="getJobResults()">Submit</button> 
+        <button class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
     </div>
     
 </body>
