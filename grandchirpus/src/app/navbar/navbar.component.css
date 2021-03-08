@@ -1,5 +1,43 @@
-ul {
-    list-style-type: none;
+section{
+    background-color: #03324C;
+    border: 5px solid  #F06639; 
     margin: 0;
-    padding: 0;
+    
+}  
+
+ img {
+    float: left;
+    /* display: inline; */
+    width: 100px;
+    height: 100px;
+    padding-right: 175px;
+    padding-left: 10px;
   }
+  
+   h1 {
+    /* position: relative; */
+    line-height: 40px;
+    Font-family: Calistoga,sans-serif;
+    font-weight: 700;
+    font-size: 3em; 
+    color: white;
+    display:flex;  
+    
+    
+  } 
+
+ul{
+    display: flex; 
+     list-style-type: none;  
+    justify-content: center;
+}
+
+a{
+    Font-family: Calistoga,sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: 50px;   
+    font-size: 15px;  
+    text-decoration: none;
+    padding-top: 50px;
+}
