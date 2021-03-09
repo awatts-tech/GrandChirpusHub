@@ -25,7 +25,11 @@ export class JobSearchComponent implements OnInit {
 
 
   getJobResults(){
+    this.careerOneService.getJobDescription();
     this.careerOneService.getJobs(this.keyword, this.jobLocation, this.jobRadius);
+    this.keyword='';
+    this.jobLocation='';
+    this.jobRadius='';
   }
 
 }

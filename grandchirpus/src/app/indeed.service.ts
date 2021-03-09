@@ -10,6 +10,8 @@ interface JobSearch {
   url: string;
 }
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,10 +19,6 @@ export class IndeedService {
 
   //empty array to hold the final results 
   public jobsList: JobSearch[] = [];
-
-  //array to hold the response we get from the array
-  //this is used to itterate over to pull the response into our array
-  jobs : any [] = [];
 
   //the userID, TokenID and url for the API
   userID = "vDMCdyYaOSf6Ytb";
@@ -36,8 +34,15 @@ export class IndeedService {
   
   constructor(private http: HttpClient) { }
   
+  //array to hold the response we get from the array
+  //this is used to itterate over to pull the response into our array
+  jobs : any [] = [];
+  
+
   //function to pull in API information
   getJobs(keyword:string, jobLocation:string, jobRadius:string) {
+
+    this.jobsList = [];
 
     //sets requestUrl by calling the getUrlWithAPIKey function to set the full API url
     const requestUrl = this.getUrlWithAPIKey() + '/' + keyword +'/' + jobLocation + '/' + jobRadius + '/' +  '/'+ this.sortColumns + '/'+ this.sortOrder + '/'+ this.startRow + '/'+ this.pageSize +'/' + this.days;
@@ -74,28 +79,28 @@ export class IndeedService {
     );
   }
 
-  // getJobDescription(){
+  getJobDescription(){
 
-  //   const requestUrl = this.getUrlWithAPIKey()+'/'+this.userID + '/' + "4BAD72EB0B744980858B60F209786A96" +'?isHtml=true&enableMetaData=false'; 
+    const requestUrl = this.getUrlWithAPIKey()+'/'+this.userID + '/' + "4BAD72EB0B744980858B60F209786A96" +'?isHtml=true&enableMetaData=false'; 
 
-  //   this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
+    this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
       
-  //     (response: any) => {
+      (response: any) => {
 
-  //       //console.log(response);
-  //       //setting our local array equal to the response from the API
-  //       //this.jobs = response.Jobs;
-  //       console.log(response);
+        //console.log(response);
+        //setting our local array equal to the response from the API
+        //this.jobs = response.Jobs;
+        console.log(response);
 
-  //       //pushes jobResults object into the jobsList array
-  //       //this.jobsList.push(jobResults);
-  //     },
-  //     (error) => {
-  //       console.error(error);
-  //     }
+        //pushes jobResults object into the jobsList array
+        //this.jobsList.push(jobResults);
+      },
+      (error) => {
+        console.error(error);
+      }
       
-  //   );
-  // }
+    );
+  }
 
 
   //function to return the full API URL with the required fields
