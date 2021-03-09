@@ -17,5 +17,19 @@
     <div class ="center-button">
         <button class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
     </div>
+
+    <div class="searchResults" *ngFor="let job of careerOneService.jobsList">
+        <div class="jobResult" >
+            <li>JobID: {{ job.JvID }}</li>
+            <li>Job Title: {{ job.jobTitle }}</li>
+            <li>Location: {{ job.location }}</li>
+            <li>Company: {{ job.company }}</li>
+            <a href ="{{job.url}}"> Apply Here </a>
+        </div>
+
+
+    </div>
+
     
 </body>
+
