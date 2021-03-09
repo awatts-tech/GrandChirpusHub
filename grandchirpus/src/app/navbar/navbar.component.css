@@ -2,28 +2,30 @@ section{
     background-color: #03324C;
     border: 5px solid  #F06639; 
     margin: 0;
-    
 }  
 
+.title{
+  align-items: center;
+}
+
  img {
-    float: left;
-    /* display: inline; */
-    width: 100px;
-    height: 100px;
-    padding-right: 175px;
-    padding-left: 10px;
+    float: right;
+    /* display: inline;  */
+    width: 336px;
+    height: 175px;
+    padding-left: 200px;
+    /* padding-left: 10px; */
   }
   
    h1 {
     /* position: relative; */
-    line-height: 40px;
+    /* line-height: 40px; */
     Font-family: Calistoga,sans-serif;
     font-weight: 700;
     font-size: 3em; 
     color: white;
-    display:flex;  
-    
-    
+    display: flex;  
+    padding-top: 25px;
   } 
 
 ul{

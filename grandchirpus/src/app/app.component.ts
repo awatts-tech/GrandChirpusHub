@@ -7,8 +7,8 @@ import { IndeedService } from './indeed.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'grandchirpus';
-  myimage:string = "assets/img/Grantchirpus-logo.PNG";
+  // title = 'grandchirpus';
+  // myimage:string = "assets/img/Grantchirpus-logo.PNG";
 
 
 
