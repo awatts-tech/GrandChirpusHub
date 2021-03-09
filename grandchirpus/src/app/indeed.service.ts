@@ -73,6 +73,31 @@ export class IndeedService {
       
     );
   }
+
+  // getJobDescription(){
+
+  //   const requestUrl = this.getUrlWithAPIKey()+'/'+this.userID + '/' + "4BAD72EB0B744980858B60F209786A96" +'?isHtml=true&enableMetaData=false'; 
+
+  //   this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
+      
+  //     (response: any) => {
+
+  //       //console.log(response);
+  //       //setting our local array equal to the response from the API
+  //       //this.jobs = response.Jobs;
+  //       console.log(response);
+
+  //       //pushes jobResults object into the jobsList array
+  //       //this.jobsList.push(jobResults);
+  //     },
+  //     (error) => {
+  //       console.error(error);
+  //     }
+      
+  //   );
+  // }
+
+
   //function to return the full API URL with the required fields
   getUrlWithAPIKey() {
     return `${this.url}${this.userID}`;

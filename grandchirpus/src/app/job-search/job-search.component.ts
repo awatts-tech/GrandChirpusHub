@@ -23,7 +23,6 @@ export class JobSearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //WIP
 
   getJobResults(){
     this.careerOneService.getJobs(this.keyword, this.jobLocation, this.jobRadius);

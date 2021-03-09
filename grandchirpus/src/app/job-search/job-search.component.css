@@ -5,3 +5,13 @@ span{
 h1{
     padding: 20px;
 }
+
+/* .jobResult{
+    border: 1px solid black;
+} */
+
+.searchResults{
+
+    border: 1px solid black;
+    list-style-type: none;
+}
