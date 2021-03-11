@@ -46,7 +46,7 @@ export class IndeedService {
 
     //sets requestUrl by calling the getUrlWithAPIKey function to set the full API url
     const requestUrl = this.getUrlWithAPIKey() + '/' + keyword +'/' + jobLocation + '/' + jobRadius + '/' +  '/'+ this.sortColumns + '/'+ this.sortOrder + '/'+ this.startRow + '/'+ this.pageSize +'/' + this.days;
-
+    console.log(requestUrl);
     //http method to call the API with the header authorization
     this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
       
@@ -81,7 +81,7 @@ export class IndeedService {
 
   getJobDescription(){
 
-    const requestUrl = this.getUrlWithAPIKey()+'/'+this.userID + '/' + "4BAD72EB0B744980858B60F209786A96" +'?isHtml=true&enableMetaData=false'; 
+    const requestUrl = this.getUrlWithAPIKey()+'/' + "4BAD72EB0B744980858B60F209786A96" +'?isHtml=true&enableMetaData=false'; 
 
     this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
       
