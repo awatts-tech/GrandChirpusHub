@@ -1,47 +1,87 @@
-section{
-    background-color: #03324C;
-    border: 5px solid  #F06639; 
-    margin: 0;
-}  
+header img {
+  height: 50px;
+  margin-left: 20px;
+}
 
-.title{
+body{
+  margin-top: 80px;
+  padding: 30px;
+}
+
+header {
+  overflow: hidden;
+  background-color: #03324C;
+  border: 5px solid  #F06639;
+  Font-family: Calistoga,sans-serif; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  display: flex;
   align-items: center;
-  top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
 }
 
- img {
-    float: right;
-    /* display: inline;  */
-    width: 336px;
-    height: 175px;
-    padding-left: 200px;
-    /* padding-left: 10px; */
-  }
+
+/* The * is a wildcard and can mean any element. So header *  means any element inside the header */
+header * {
+  display: inline;
+}
+/* spaces out nav links */
+header li {
+  margin: 20px;
+
+}
+/* removes the style and changes color of nav links */
+header li a {
+  color: white;
+  text-decoration: none;
   
-   h1 {
-    /* position: relative; */
-    /* line-height: 40px; */
-    Font-family: Calistoga,sans-serif;
-    font-weight: 700;
-    font-size: 3em; 
-    color: white;
-    display: flex;  
-    padding-top: 25px;
-  } 
-
-ul{
-    display: flex; 
-     list-style-type: none;  
-    justify-content: center;
 }
 
-a{
-    Font-family: Calistoga,sans-serif;
-    font-weight: 700;
-    color: white;
-    padding: 50px;   
-    font-size: 15px;  
-    text-decoration: none;
+h1 {
+  color: white;
+  padding-left: 20px;
+}
+
+/* phone */ 
+@media screen and (max-width: 400px) {
+   header a {
+    display: flex;
+    flex-direction: column;  
+  }
+ 
+  header li{
+    margin: 0;
+  }
+  header img {
+    display: none;
+}
+}
+/*tablet size */
+@media screen and (max-width: 768px){
+  
+  header{
+    background-color: #F06639;
+  }  
+  header a {
+    display: flex;
+    flex-direction: column; 
+    
+  }
+
+  header li{
+    margin: 0;
+ }
+
+   header li a {
+        color: #005A87;
+        font-size: 12px;
+  }
+
+  h1{
+    font-size: 20px;
+    padding-right: 120px;
+    
+  }
 }
