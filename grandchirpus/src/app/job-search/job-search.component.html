@@ -4,7 +4,7 @@
     <div class = "searchFields">
         <div class = "row g-3">
             <div class="col"> 
-            <input type="text" placeholder="keyword" name="Keyword" [(ngModel)]="keyword"  class="form-control"/>
+            <input type="text" id="setSearchSuggestion" placeholder="Keyword" name="Keyword" [(ngModel)]="keyword"  class="form-control"/>
             </div>
             <div class="col">
             <input type = "text" placeholder="State (VA) or Zipcode (20191)" name = "jobLocation" [(ngModel)]="jobLocation" class="form-control" />
@@ -20,16 +20,16 @@
 
     <div class="searchResults" *ngFor="let job of careerOneService.jobsList">
         <div class="jobResult" >
-            <li>JobID: {{ job.JvID }}</li>
             <li>Job Title: {{ job.jobTitle }}</li>
             <li>Location: {{ job.location }}</li>
             <li>Company: {{ job.company }}</li>
             <a href ="{{job.url}}"> Apply Here </a>
         </div>
-
-
+        <button (click)= "getFullJobDescription(job.JvID)" >Get Full Job Description</button>
+                <div id='description' *ngFor="let desc of careerOneService.jobDescList">
+                <li class='description'>Descirption: {{ desc.description }}</li>
+                </div>
+            
     </div>
-
-    
 </body>
 

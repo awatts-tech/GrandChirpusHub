@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-//interface to define what we want to pull in from the response into our object
+//interface to define what we want to pull in from the response of the Job Search API into our object
 interface JobSearch {
   JvID: string;
   jobTitle: string;
@@ -10,7 +10,10 @@ interface JobSearch {
   url: string;
 }
 
-
+//interface to define what we want to pull in from the response of Job Description API into our object
+interface JobDescription {
+  description: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +22,7 @@ export class IndeedService {
 
   //empty array to hold the final results 
   public jobsList: JobSearch[] = [];
+  public jobDescList: JobDescription[] = [];
 
   //the userID, TokenID and url for the API
   userID = "vDMCdyYaOSf6Ytb";
@@ -36,8 +40,7 @@ export class IndeedService {
   
   //array to hold the response we get from the array
   //this is used to itterate over to pull the response into our array
-  jobs : any [] = [];
-  
+  jobs : any [] = []; 
 
   //function to pull in API information
   getJobs(keyword:string, jobLocation:string, jobRadius:string) {
@@ -46,7 +49,7 @@ export class IndeedService {
 
     //sets requestUrl by calling the getUrlWithAPIKey function to set the full API url
     const requestUrl = this.getUrlWithAPIKey() + '/' + keyword +'/' + jobLocation + '/' + jobRadius + '/' +  '/'+ this.sortColumns + '/'+ this.sortOrder + '/'+ this.startRow + '/'+ this.pageSize +'/' + this.days;
-    console.log(requestUrl);
+   
     //http method to call the API with the header authorization
     this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
       
@@ -79,21 +82,22 @@ export class IndeedService {
     );
   }
 
-  getJobDescription(){
+  getJobDescription(jobID){
 
-    const requestUrl = this.getUrlWithAPIKey()+'/' + "4BAD72EB0B744980858B60F209786A96" +'?isHtml=true&enableMetaData=false'; 
+    this.jobDescList = [];
+
+    const requestUrl = this.getUrlWithAPIKey()+'/' + jobID +'?isHtml=true&enableMetaData=false'; 
 
     this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
       
       (response: any) => {
 
-        //console.log(response);
-        //setting our local array equal to the response from the API
-        //this.jobs = response.Jobs;
-        console.log(response);
-
-        //pushes jobResults object into the jobsList array
-        //this.jobsList.push(jobResults);
+        //console.log(response.Description);
+        const jobDescResults : JobDescription = {
+            description: response.Description
+        }
+        this.jobDescList.push(jobDescResults);
+        console.log(jobDescResults);
       },
       (error) => {
         console.error(error);
