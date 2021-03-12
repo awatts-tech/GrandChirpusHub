@@ -31,17 +31,17 @@ export class InterviewPrepComponent implements OnInit {
       "People Who Are Crazy Enough To Think They Can Change The World, Are The Ones Who Do. – Rob Siltane",
     ];
     
-    getRandom(){
-      const newQuestion = this.basicQuestions[Math.floor(Math.random()* this.basicQuestions.length)]; 
-      console.log(newQuestion);
-     
-    }
+     basicRandom(){
+       const newQuestion = this.basicQuestions[Math.floor(Math.random()* this.basicQuestions.length)]; 
+       console.log(newQuestion);
+       document.getElementById('displayBasicQuestions').innerHTML= newQuestion;
+      }
     
-  
-    // getRandom2(){
-    //     let randomQuestion = Math.floor(Math.random() * (this.technicalQuestions.length));
-    //   }
-    
-   //const randomQuestion = this.basicQuestions[Math.floor(Math.random()* this.basicQuestions.length)]; 
-    //console.log(randomQuestion);
-}
+      technicalRandom(){
+        const newTechQuestion = this.basicQuestions[Math.floor(Math.random()* this.technicalQuestions.length)]; 
+        console.log(newTechQuestion);
+        document.getElementById('displayTechQuestions').innerHTML= newTechQuestion;
+       }
+
+   
+  }
