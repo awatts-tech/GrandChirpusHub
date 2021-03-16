@@ -43,5 +43,10 @@ export class InterviewPrepComponent implements OnInit {
         document.getElementById('displayTechQuestions').innerHTML= newTechQuestion;
        }
 
-   
-  }
+
+
+flip() {
+  const card = document.querySelector('.card');
+  card.classList.toggle('is-flipped');  
+}
+}
