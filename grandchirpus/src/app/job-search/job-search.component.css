@@ -10,8 +10,7 @@ h1{
     border: 1px solid black;
 } */
 
-.searchResults{
-
+#searchResults{
     border: 1px solid black;
     list-style-type: none;
     padding: 20px;
@@ -28,4 +27,9 @@ body{
 
 .center-button{
     margin-top:10px;
+}
+
+#description{
+    border: 1px solid black;
+    float: right;
 }

@@ -18,7 +18,7 @@ export class InterviewPrepComponent implements OnInit {
     "Why do you want to work here?",
     "Tell me about a time you showed leadership.",
     "Tell me about a time you were successful on a team.",
-    "What would your co-workers say about you?",
+    "What would your co-workers say about you?"
     ];
    technicalQuestions : string[] = [
       "How Would You Explain APIs to a Nontechnical Stakeholder?",
@@ -29,7 +29,7 @@ export class InterviewPrepComponent implements OnInit {
       "Tell Me About a Time When You Explained a Technical Process or Concept to Someone Who Did not Have a Technical Background.",
       "What development tools have you used?",
       "What languages have you programmed in?",
-      "What strengths do you think are most important in a developer role [or another relevant IT position]?",
+      "What strengths do you think are most important in a developer role (or another relevant IT position)?"
     ];
     
      basicRandom(){
@@ -39,7 +39,7 @@ export class InterviewPrepComponent implements OnInit {
       }
     
       technicalRandom(){
-        const newTechQuestion = this.basicQuestions[Math.floor(Math.random()* this.technicalQuestions.length)]; 
+        const newTechQuestion = this.technicalQuestions[Math.floor(Math.random()* this.technicalQuestions.length)]; 
         console.log(newTechQuestion);
         document.getElementById('displayTechQuestions').innerHTML= newTechQuestion;
        }
@@ -49,6 +49,11 @@ export class InterviewPrepComponent implements OnInit {
 flip() {
   const card = document.querySelector('.card');
   card.classList.toggle('is-flipped');  
+}
+
+flip2() {
+  const card2 = document.querySelector('.card2');
+  card2.classList.toggle('is-flipped2');  
 }
 }
 
