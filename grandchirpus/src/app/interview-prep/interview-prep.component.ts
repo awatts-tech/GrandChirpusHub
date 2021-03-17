@@ -16,8 +16,8 @@ export class InterviewPrepComponent implements OnInit {
     "What is your greatest weakness?",
     "Why should we hire you?",
     "Why do you want to work here?",
-    "Tell me about a time you showed leadership",
-    "Tell me about a time you were successful on a team",
+    "Tell me about a time you showed leadership.",
+    "Tell me about a time you were successful on a team.",
     "What would your co-workers say about you?",
     ];
    technicalQuestions : string[] = [
@@ -25,11 +25,11 @@ export class InterviewPrepComponent implements OnInit {
       "Tell Me About a Complex Application You’ve Worked on or Supported.",
       "How are you defining your media queries? With min-width or max-width? What is the difference between the two?",
       "Explain component based architecture. What is it? What is a component? Show an example",
-      "What’s a New Software or Technology You Recently Worked With and How Did You Come to Learn It?",
-      "Tell Me About a Time When You Explained a Technical Process or Concept to Someone Who Didn’t Have a Technical Background.",
+      "What is a New Software or Technology You Recently Worked With and How Did You Come to Learn It?",
+      "Tell Me About a Time When You Explained a Technical Process or Concept to Someone Who Did not Have a Technical Background.",
       "What development tools have you used?",
       "What languages have you programmed in?",
-      "What strengths do you think are most important in a developer [or another relevant IT position]?",
+      "What strengths do you think are most important in a developer role [or another relevant IT position]?",
     ];
     
      basicRandom(){
