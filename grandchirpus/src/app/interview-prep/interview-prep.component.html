@@ -1,22 +1,26 @@
+<div class="buttons">
 
+    <button class= "basicRandom"(click)="basicRandom()">Basic Interview Question</button>
+    <button class= "technicalRandom"(click)="technicalRandom()">Technical Interview Question</button>
 
-
-<div id = 'displayBasicQuestions'> 
 </div>
- <button class= "basicRandom"(click)="basicRandom()">Basic Interview Question</button>   
+    
+<div class= "questionsFlipCards"> 
+    <div class="scene scene--card">
+        <div class="card" (click)="flip()">
+          <div class="card__face card__face--front">
+              <div id = 'displayBasicQuestions'> Click on the button to practice interview questions.
+        </div>
+        <!-- <div id = 'displayTechQuestions'>
+        </div> -->
+        </div>
+          <div class="card__face card__face--back"> Answers go here
 
- 
 
- <div id = 'displayTechQuestions'> 
+
+          </div>
+        </div>
+        <p>Click card to see answer.</p> 
+      </div>
+     
 </div>
-    <button class= "technicalRandom"(click)="technicalRandom()">Technical Interview Question</button>   
-   
-
-
-<div class="scene scene--card">
-  <div class="card" (click)="flip()">
-    <div class="card__face card__face--front">front</div>
-    <div class="card__face card__face--back">back</div>
-  </div>
-</div>
-<p>Click card to flip.</p>

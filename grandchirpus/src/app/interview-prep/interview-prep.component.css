@@ -33,8 +33,8 @@ display: flex
     body { font-family: sans-serif; }
 
 .scene {
-  width: 200px;
-  height: 260px;
+  width: 400px;
+  height: 460px;
   border: 1px solid #CCC;
   margin: 40px 0;
   perspective: 600px;
@@ -61,16 +61,21 @@ display: flex
   color: white;
   text-align: center;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 20px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .card__face--front {
-  background: red;
+  background: #F06639;
 }
 
 .card__face--back {
-  background: blue;
+  background: #03324C;
   transform: rotateY(180deg);
+}
+
+
+.questionsFlipCards{
+  display: flex;
 }

@@ -1,4 +1,5 @@
 import { getLocaleMonthNames } from '@angular/common';
+import { normalizeGenFileSuffix } from '@angular/compiler/src/aot/util';
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-interview-prep',
@@ -50,3 +51,4 @@ flip() {
   card.classList.toggle('is-flipped');  
 }
 }
+
