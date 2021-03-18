@@ -71,6 +71,7 @@ export class IndeedService {
 
         //pushes jobResults object into the jobsList array
         this.jobsList.push(jobResults);
+        
       }
 
       console.log(this.jobsList);
@@ -83,7 +84,7 @@ export class IndeedService {
   }
 
   getJobDescription(jobID){
-
+    
     this.jobDescList = [];
 
     const requestUrl = this.getUrlWithAPIKey()+'/' + jobID +'?isHtml=true&enableMetaData=false'; 
@@ -96,8 +97,8 @@ export class IndeedService {
         const jobDescResults : JobDescription = {
             description: response.Description
         }
-        this.jobDescList.push(jobDescResults);
-        console.log(jobDescResults);
+        this.jobDescList.unshift(jobDescResults);
+        //console.log(this.jobDescList[0].description);
       },
       (error) => {
         console.error(error);
