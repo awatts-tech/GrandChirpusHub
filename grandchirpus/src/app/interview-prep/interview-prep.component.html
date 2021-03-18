@@ -1,0 +1,35 @@
+<section>
+<div class= "questionsFlipCards"> 
+    <div class="scene scene--card">
+        <div class="card" (click)="flip()">
+          <div class="card__face card__face--front">
+              <div id = 'displayBasicQuestions'> Click on the button to practice interview questions.
+        </div>
+        <!-- <div id = 'displayTechQuestions'>
+        </div> -->
+        </div>
+          <div class="card__face card__face--back"> Answers go here
+          </div>
+        </div>
+        <p>Click card to see answer.</p> 
+      </div>
+      <button class= "basicRandom"(click)="basicRandom()">Basic Interview Question</button>
+</section>
+
+      <div class="scene scene--card">
+        <div class="card" (click)="flip()">
+          <div class="card__face card__face--front">
+              
+        <div id = 'displayTechQuestions'>
+        </div>
+        </div>
+          <div class="card__face card__face--back"> Answers go here
+
+
+
+          </div>
+        </div>
+        <p>Click card to see answer.</p> 
+      </div>
+      <button class= "technicalRandom"(click)="technicalRandom()">Technical Interview Question</button>
+</div>
