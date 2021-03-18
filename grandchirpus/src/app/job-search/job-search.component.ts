@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { Router } from '@angular/router'
 import { IndeedService } from '../indeed.service';
 
@@ -38,10 +38,11 @@ export class JobSearchComponent implements OnInit {
   ngOnInit(): void {
     this.setSearchSuggestion();
   }
-
+  
   getFullJobDescription(jobID){
-    this.careerOneService.getJobDescription(jobID);
-    jobID.stopPropagation();
+   this.careerOneService.getJobDescription(jobID);
+   
+   //this.setInnerHTML();
     // if(!this.jobsShowing){
     //   this.careerOneService.getJobDescription(jobID)
     //   this.jobsShowing = true;
@@ -52,17 +53,37 @@ export class JobSearchComponent implements OnInit {
     // }
   }
 
+  setInnerHTML(){
+    const item = this.careerOneService.jobDescList[0].description;
+    const update = document.getElementById("fullJobDescription");
+    update.innerHTML = item;
+  }
+
   setSearchSuggestion(){
     const searchTerm = this.searchSuggestions[Math.floor(Math.random()* this.searchSuggestions.length)];
     (<HTMLInputElement>document.getElementById("setSearchSuggestion")).placeholder= searchTerm;
   }
 
   getJobResults(){
-    this.setSearchSuggestion();
+    // const testdiv = document.createElement('div');
+    // testdiv.setAttribute('id','testdiv');
+    // this.setSearchSuggestion();
     this.careerOneService.getJobs(this.keyword, this.jobLocation, this.jobRadius);
     this.keyword='';
     this.jobLocation='';
     this.jobRadius='';
+    // document.getElementById("jobDescButton").addEventListener("click", function() {
+    //   console.log('working');
+    // });
   }
+
+  // addbtn(){
+  //   const testbtn = document.createElement('button');
+  //   testbtn.addEventListener('click', function(){
+  //     console.log('success');
+  //   })
+  //   document.getElementById("testdiv").appendChild(testbtn);
+  //   console.log("working");
+  // }
 
 }

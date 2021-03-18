@@ -25,18 +25,20 @@
         <button class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
     </div>
 
-    <div class="searchResults" *ngFor="let job of careerOneService.jobsList">
-        <div class="jobResult" >
+    <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
+        
             <li>Job Title: {{ job.jobTitle }}</li>
             <li>Location: {{ job.location }}</li>
             <li>Company: {{ job.company }}</li>
-            <a href ="{{job.url}}"> Apply Here </a>
-        </div>
-        <button (click)= "getFullJobDescription(job.JvID)" >Get Full Job Description</button>
-                <div id='description' *ngFor="let desc of careerOneService.jobDescList">
-                <li class='description'>Descirption: {{ desc.description }}</li>
-                </div>
-            
+            <li><a href ="{{job.url}}"> Apply Here </a></li>
+            <button id="jobDescButton" (click)="getFullJobDescription(job.JvID)"> Get Full Job Description {{ job.JvID }} </button>
+        
     </div>
+            <div id='description' *ngFor="let desc of careerOneService.jobDescList">
+                <div id='fullJobDescription'>Description: {{ desc.description }}</div>
+
+            </div>
+            
+    
 </body>
 
