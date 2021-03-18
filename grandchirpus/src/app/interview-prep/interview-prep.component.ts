@@ -29,27 +29,31 @@ export class InterviewPrepComponent implements OnInit {
       "Tell Me About a Time When You Explained a Technical Process or Concept to Someone Who Did not Have a Technical Background.",
       "What development tools have you used?",
       "What languages have you programmed in?",
-<<<<<<< HEAD
-      "What strengths do you think are most important in a developer role [or another relevant IT position]?"
-=======
       "What strengths do you think are most important in a developer role (or another relevant IT position)?"
->>>>>>> 9d91ebedb12aa71b26123de51b3913c78c459925
     ];
     
-     basicRandom(){
-       const newQuestion = this.technicalQuestions[Math.floor(Math.random()* this.basicQuestions.length)]; 
-       console.log(newQuestion);
-       document.getElementById('displayBasicQuestions').innerHTML= newQuestion;
+    i= 0;
+    basicRandom(){   
+        const newQuestion = this.basicQuestions[this.i]; 
+        console.log(newQuestion);
+        document.getElementById('displayBasicQuestions').innerHTML= newQuestion;
+        this.i++; 
+        if(this.i== this.basicQuestions.length){
+        this.i = 0;
+        }
       }
-    
+        
+      j= 0;
       technicalRandom(){
-        const newTechQuestion = this.technicalQuestions[Math.floor(Math.random()* this.technicalQuestions.length)]; 
+        const newTechQuestion = this.technicalQuestions[this.j]; 
         console.log(newTechQuestion);
         document.getElementById('displayTechQuestions').innerHTML= newTechQuestion;
-       }
-
-
-
+        this.j++; 
+        if(this.j== this.technicalQuestions.length){
+        this.j = 0;
+      }
+    }
+    
 flip() {
   const card = document.querySelector('.card');
   card.classList.toggle('is-flipped');  
