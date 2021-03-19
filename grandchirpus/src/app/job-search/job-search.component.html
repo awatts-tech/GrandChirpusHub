@@ -26,13 +26,7 @@
     </div>
 
     <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
-        
-            <li>Job Title: {{ job.jobTitle }}</li>
-            <li>Location: {{ job.location }}</li>
-            <li>Company: {{ job.company }}</li>
-            <li><a href ="{{job.url}}"> Apply Here </a></li>
-            <button id="jobDescButton" (click)="getFullJobDescription(job.JvID)"> Get Full Job Description {{ job.JvID }} </button>
-        
+     <app-job-item [job]="job"></app-job-item>   
     </div>
             <div id='description' *ngFor="let desc of careerOneService.jobDescList">
                 <div id='fullJobDescription'>Description: {{ desc.description }}</div>
