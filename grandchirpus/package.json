@@ -1,9 +1,11 @@
+
 {
+  "engines": { "node": "12.x" },
   "name": "grandchirpus",
   "version": "0.0.0",
   "scripts": {
+    "start": "node server.js",
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
