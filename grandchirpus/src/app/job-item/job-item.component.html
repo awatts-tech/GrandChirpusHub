@@ -1,0 +1,6 @@
+<li>Job Title: {{ job.jobTitle }}</li>
+<li>Location: {{ job.location }}</li>
+<li>Company: {{ job.company }}</li>
+<li><a href ="{{job.url}}"> Apply Here </a></li>
+<button id="jobDescButton" (click)="getFullJobDescription(job.JvID)"> Get Full Job Description {{ job.JvID }} </button>
+

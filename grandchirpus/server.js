@@ -1,7 +1,7 @@
 const port = process.env.PORT || 3000;
 
-// const express = require('express');
-// const app = express();
+const express = require('express');
+const app = express();
 
 // const trivia = require('./trivia');
 // app.use('/', trivia);
@@ -9,6 +9,7 @@ const port = process.env.PORT || 3000;
 // app.get('/test', (req, res) => {
 // 	res.json('Woo hoo');
 // });
+app.use(express.static('public'))
 
 app.listen(port, () => {
 	console.log('Application started...');

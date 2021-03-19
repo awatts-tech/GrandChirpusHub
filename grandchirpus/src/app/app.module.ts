@@ -11,6 +11,7 @@ import { CompaniesComponent } from './companies/companies.component';
 import { InterviewPrepComponent } from './interview-prep/interview-prep.component';
 import { NetworkingComponent } from './networking/networking.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { JobItemComponent } from './job-item/job-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     CompaniesComponent,
     InterviewPrepComponent,
     NetworkingComponent,
-    NavbarComponent
+    NavbarComponent,
+    JobItemComponent
   ],
   imports: [
     BrowserModule,
