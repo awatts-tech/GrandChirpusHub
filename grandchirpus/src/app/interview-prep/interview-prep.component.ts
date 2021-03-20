@@ -20,6 +20,7 @@ export class InterviewPrepComponent implements OnInit {
     "Tell me about a time you were successful on a team.",
     "What would your co-workers say about you?"
     ];
+    
    technicalQuestions : string[] = [
       "How Would You Explain APIs to a Nontechnical Stakeholder?",
       "Tell Me About a Complex Application You’ve Worked on or Supported.",

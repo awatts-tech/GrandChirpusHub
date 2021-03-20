@@ -1,9 +1,3 @@
-<style>
-    body  {
-      background-image: url('assets/images/header-image.jpg');
-    }
-</style>
-
 <body>
     
     <h1>Ready for your next <span>career</span>?</h1>
@@ -21,24 +15,23 @@
             </div>
         </div>
     </div>
+
     <div class ="center-button">
         <button class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
     </div>
 
-    <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
-        
+    <div class="searchResults">
+        <div id="jobResults" *ngFor="let job of careerOneService.jobsList">       
             <li>Job Title: {{ job.jobTitle }}</li>
             <li>Location: {{ job.location }}</li>
             <li>Company: {{ job.company }}</li>
             <li><a href ="{{job.url}}"> Apply Here </a></li>
-            <button id="jobDescButton" (click)="getFullJobDescription(job.JvID)"> Get Full Job Description {{ job.JvID }} </button>
-        
+            <button id="jobDescButton" (click)="getFullJobDescription(job.JvID)"> Get Full Job Description </button>
+        </div>
     </div>
-            <div id='description' *ngFor="let desc of careerOneService.jobDescList">
-                <div id='fullJobDescription'>Description: {{ desc.description }}</div>
-
-            </div>
-            
-    
+        
+    <div class="searchResults2">
+        <div id='description' > </div>
+    </div>
 </body>
 

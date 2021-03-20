@@ -40,23 +40,14 @@ export class JobSearchComponent implements OnInit {
   }
   
   getFullJobDescription(jobID){
-   this.careerOneService.getJobDescription(jobID);
-   
-   //this.setInnerHTML();
-    // if(!this.jobsShowing){
-    //   this.careerOneService.getJobDescription(jobID)
-    //   this.jobsShowing = true;
-    // }else{
-    //   document.getElementById("description").style.display = "none";
-    //   this.jobsShowing = false;
-    //   console.log("HERE");
-    // }
-  }
 
-  setInnerHTML(){
-    const item = this.careerOneService.jobDescList[0].description;
-    const update = document.getElementById("fullJobDescription");
-    update.innerHTML = item;
+    this.careerOneService.getJobDescription(jobID);
+    //setTimeout(this.setInnerHTML, 600);
+    console.log(this.careerOneService.test);
+    const testing = this.careerOneService.test;
+    document.getElementById('description').innerHTML = testing;
+    
+    //return this.careerOneService.test;
   }
 
   setSearchSuggestion(){
@@ -65,25 +56,9 @@ export class JobSearchComponent implements OnInit {
   }
 
   getJobResults(){
-    // const testdiv = document.createElement('div');
-    // testdiv.setAttribute('id','testdiv');
-    // this.setSearchSuggestion();
     this.careerOneService.getJobs(this.keyword, this.jobLocation, this.jobRadius);
     this.keyword='';
     this.jobLocation='';
     this.jobRadius='';
-    // document.getElementById("jobDescButton").addEventListener("click", function() {
-    //   console.log('working');
-    // });
   }
-
-  // addbtn(){
-  //   const testbtn = document.createElement('button');
-  //   testbtn.addEventListener('click', function(){
-  //     console.log('success');
-  //   })
-  //   document.getElementById("testdiv").appendChild(testbtn);
-  //   console.log("working");
-  // }
-
 }
