@@ -17,6 +17,7 @@ body{
 .center-button{
     margin-top:10px;
     margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 .searchResults{
@@ -47,3 +48,62 @@ body{
     background-color: rgb(244,243,241);
     font-size: 12px;
 }
+
+@media screen and (max-width: 768px) {
+
+    h1{
+        font-size: 30px;
+    }
+
+    .center-button{
+        margin-bottom: 10px;
+        }
+    
+
+    #inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col{
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .searchResults{
+        width: 100%;
+        padding-right: 20px;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    
+    h1{
+        font-size: 28px;
+    }
+    
+   #submit-button{
+       font-size: 14px;
+   }
+
+   .center-button{
+    margin-bottom: 10px;
+    }
+
+    #inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col{
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .searchResults{
+        width: 100%;
+        padding-right: 20px;
+    }
+}
+

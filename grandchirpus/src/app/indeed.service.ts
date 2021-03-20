@@ -23,7 +23,7 @@ export class IndeedService {
   //empty array to hold the final results 
   public jobsList: JobSearch[] = [];
   public jobDescList: JobDescription[] = [];
-  public test = '' ;
+  public jobDesc = '' ;
 
   //the userID, TokenID and url for the API
   userID = "vDMCdyYaOSf6Ytb";
@@ -35,7 +35,7 @@ export class IndeedService {
   sortColumns:string = '0';
   sortOrder:string = '0';
   startRow:number = 0; 
-  pageSize:number = 2; 
+  pageSize:number = 4; 
   
   constructor(private http: HttpClient) { }
   
@@ -96,13 +96,16 @@ export class IndeedService {
       
       (response: any) => {
 
-        //set the 
+        //set the response from the array to the jobDescResults object
         const jobDescResults:JobDescription = { 
           description: response.Description
         }
         
+        //push the job jobDescResults object into the JobDescList array
         this.jobDescList.push(jobDescResults);
-        this.test = this.jobDescList[0].description;
+
+        //set the jobDesc variable equal to the jobDescList description at the 0 index of the array
+        this.jobDesc = this.jobDescList[0].description;
         //console.log(this.jobDescList[0]);
         //return this.test;
       },

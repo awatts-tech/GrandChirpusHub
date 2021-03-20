@@ -11,13 +11,12 @@ import { IndeedService } from '../indeed.service';
 })
 export class JobSearchComponent implements OnInit {
 
-//required fields in the API URL
-
-  //these fields the user will be able to set in the webpage
+  //these are the fields the user will be able to set in the webpage to run their search
    keyword:string = '';
    jobLocation:string = '';
    jobRadius:string = '';
 
+  //array of strings to be shown in the Keyword search on the JobSearch Page
    searchSuggestions = [
     "Try searching for Developer...",
     "Try searching for Programmer...",
@@ -35,28 +34,27 @@ export class JobSearchComponent implements OnInit {
 
   constructor(public careerOneService: IndeedService) { }
 
+  //runs the search Suggestion button on init
   ngOnInit(): void {
     this.setSearchSuggestion();
   }
-  
-  getFullJobDescription(jobID){
 
-    this.careerOneService.getJobDescription(jobID);
-    //setTimeout(this.setInnerHTML, 600);
-    console.log(this.careerOneService.test);
-    const testing = this.careerOneService.test;
-    document.getElementById('description').innerHTML = testing;
-    
-    //return this.careerOneService.test;
-  }
-
+  //function to randomly change the keyword search box
   setSearchSuggestion(){
+    //sets search term to a random item in the searchSuggestions array
     const searchTerm = this.searchSuggestions[Math.floor(Math.random()* this.searchSuggestions.length)];
+    
+    //changes the placeholder on the searchSuggestions id in the HTML to the searchTerm Variable
     (<HTMLInputElement>document.getElementById("setSearchSuggestion")).placeholder= searchTerm;
   }
 
+  //function to call the API for getting the jobs
   getJobResults(){
+
+    //calls the getJobs API with the 3 search terms we selected
     this.careerOneService.getJobs(this.keyword, this.jobLocation, this.jobRadius);
+
+    //sets all of the following variables back to an empty string so they disappear from the search boxes
     this.keyword='';
     this.jobLocation='';
     this.jobRadius='';
