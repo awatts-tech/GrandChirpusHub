@@ -1,53 +1,49 @@
-<div class= "questionsFlipCards"> 
-    <div class="scene scene--card">
-        <div class="card" (click)="flip()">
-          <div class="card__face card__face--front">
-              <div id = 'displayBasicQuestions'> Click on the button to practice interview questions.
-        </div>
-        <!-- <div id = 'displayTechQuestions'>
-        </div> -->
-        </div>
-          <div class="card__face card__face--back"> Answers go here
-          </div>
-        </div>
-        <p>Click card to see answer.</p> 
-      </div>
-      <button class= "basicRandom"(click)="basicRandom()">Basic Interview Question</button>
+<section>
+<div class ="button-container1">
+  <button class="basicRandom" (click)="basicRandom(); basicAnswersRandom()">
+    Basic Interview Question
+  </button>
+  </div>
 
-      <div class="scene scene--card">
-        <div class="card2" (click)="flip2()">
-          <div class="card__face card__face--front">
-              
-        <div id = 'displayTechQuestions'> Testing technical questions
-        </div>
-        </div>
-          <div class="card__face card__face--back"> Answers go here
- <!-- <div id = 'displayAnswers'> 
+  <div class ="button-container2">
+  <button class="technicalRandom"(click)="technicalRandom(); technicalRandomAnswers()">
+    Technical Interview Question
+</button>    
 </div>
-    <button class= "answers"(click)="answers()">Answers</button>    -->
+</section>
 
-    <article class="flashcard">
-        <input id="flashcard-1" type="checkbox" />
-        <label for="flashcard-1">
-          <section class="front">
-            Front of the flashcard!
-          </section>
-          
-          <section class="back">
-            Back of the flashcard!
-          </section>
-        </label>
-      </article>
-   
+<div class="questionsFlipCards">
 
 
-          </div>
+  <div class="scene scene--card">
+    <div class="card" (click)="flip()">
+      <div class="card__face card__face--front">
+        <div id="displayBasicQuestions">
+          Click on the button to practice basic interview questions.
         </div>
-        <p>Click card to see answer.</p> 
       </div>
-      <button class= "technicalRandom"(click)="technicalRandom()">Technical Interview Question</button>
+      <div class="card__face card__face--back">
+        <div id="displayBasicAnswers"></div>
+      </div>
+    </div>
+    <p>Click card to see answer.</p>
+  </div>
+           
+          <!--Grant Chirpus Image  -->
+  <img src="assets/images/image001.gif" />
+
+
+  <div class="scene scene--card">
+    <div class="card2" (click)="flip2()">
+      <div class="card__face card__face--front">
+        <div id="displayTechQuestions">Click on the button to practice technical interview questions.</div>
+      </div>
+      <div class="card__face card__face--back">
+        <div id="displayTechAnswers"></div>
+
+      </div>
+    </div>
+    <p>Click card to see answer.</p>
+  </div>
+         
 </div>
-
-
-<img src="assets/images/image001.gif">
-
