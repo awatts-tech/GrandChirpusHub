@@ -20,6 +20,7 @@
         <button class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
     </div>
 
+<<<<<<< HEAD
     <div class="searchResults">
         <div id="jobResults" *ngFor="let job of careerOneService.jobsList">       
             <li>Job Title: {{ job.jobTitle }}</li>
@@ -32,6 +33,10 @@
         
     <div class="searchResults2">
         <div id='description' > </div>
+=======
+    <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
+     <app-job-item [job]="job"></app-job-item>   
+>>>>>>> 6a768a1a76f0018b2ee0e2d864c2186782cb8663
     </div>
 </body>
 
