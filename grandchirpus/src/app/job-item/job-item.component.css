@@ -1,0 +1,46 @@
+.jobItem{
+    border: 5px solid #F06639;
+    list-style-type: none;
+    padding: 20px;
+    background-color: #03324cD9;
+    Font-family: Calistoga,sans-serif;
+    color: white;
+    width: 350px;
+    margin-bottom: 10px;
+}
+
+#jobDescButton{
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .jobItem{
+        border: 5px solid #F06639;
+        list-style-type: none;
+        color: white;
+        background-color: #03324cD9;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+}
+
+
+@media screen and (max-width: 360px){
+
+    .jobItem{
+        border: 5px solid #F06639;
+        list-style-type: none;
+        color: white;
+        background-color: #03324cD9;
+        width: 100%;
+        padding-right: 20px;
+    }
+
+}
+
+
+
+
+

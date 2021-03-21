@@ -6,30 +6,104 @@ h1{
     padding: 20px;
 }
 
-/* .jobResult{
-    border: 1px solid black;
-} */
-
-#searchResults{
-    border: 1px solid black;
-    list-style-type: none;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0);
-    width: 450px;
-}
-
 body{
     height: 650px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
+    background-image: url('/assets/images/header-image.jpg');
 }
 
 .center-button{
     margin-top:10px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.searchResults{
+    display:flex;
+    flex-direction: column;
+}
+
+.searchResults2{
+    border: 1px solid hotpink;
+    width: 100%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+#jobResults{
+    border: 1px solid black;
+    list-style-type: none;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 450px;
+    margin: 0;
 }
 
 #description{
     border: 1px solid black;
-    float: right;
+    width: 600px;
+    /* margin: 0; */
+    background-color: rgb(244,243,241);
+    font-size: 12px;
 }
+
+@media screen and (max-width: 768px) {
+
+    h1{
+        font-size: 30px;
+    }
+
+    .center-button{
+        margin-bottom: 10px;
+        }
+    
+
+    #inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col{
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .searchResults{
+        width: 100%;
+        padding-right: 20px;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    
+    h1{
+        font-size: 28px;
+    }
+    
+   #submit-button{
+       font-size: 14px;
+   }
+
+   .center-button{
+    margin-bottom: 10px;
+    }
+
+    #inputs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col{
+        width: 100%;
+        padding-right: 20px;
+    }
+
+    .searchResults{
+        width: 100%;
+        padding-right: 20px;
+    }
+}
+
