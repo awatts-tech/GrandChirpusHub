@@ -1,162 +1,212 @@
-header{
-  background-color: #03324C;
-  border: 6px solid  #F06639;
-  Font-family: Calistoga,sans-serif; 
-  top: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
-  position: fixed; 
-  z-index:999;   /*always on top of everything else */
-  width: 100%;
-}
-.title{
-  font-size: 20px;
-  padding-top: 20px;
-  color: white;
-}
-.nav-toggle {
-  display: none;
-}
-
-.nav-toggle-label{
-  position: absolute;
-  top: 0;
-  left:0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.nav-toggle-label span,
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  display: block;
-  background: white;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position:relative;
-}
-
-.nav-toggle-label span::before,
-.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
-}
-
-.nav-toggle-label span::before{
-  bottom: 7px;
-}
-
-.nav-toggle-label span::after{
-  top: 7px;
-}
-nav{
-  position: absolute;
-  text-align: left;
-  top:100%;
-  left: 0;
-  background-color: #03324C;
-  border: 6px solid  #F06639;
-  width: 100%;
-  transform: scale(1,0); 
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;  
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  margin-bottom: 1em;
-  margin-left: 1em; 
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2 em;
-  text-transform: uppercase; 
-  opacity:0;
-  transition: opacity 150ms ease-in-out; /*animation*/
-}
-nav a:hover {
-  color:#F06639;
-}
-/* the ~ looks for any preceeding sibling, it doesn't have to be immediately after */
-.nav-toggle:checked ~ nav {
-  /* display: block; */
-  transform: scale(1,1);
-}
-
-.nav-toggle:checked ~ nav a{
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
-}
-
-@media screen and (min-width: 800px) {
-   .nav-toggle-label {
-      display: none;
+/* Mobile first design */
+  header{
+    background-color: #F06639;
+    border: 6px solid #03324C;
+    Font-family: Calistoga,sans-serif; 
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: fixed; 
+    z-index:999;   
+    width: 100%;
   }
+
+  .title{
+    font-family: 'Ranchers', cursive;
+    font-size: 20px;
+    padding-top: 20px;
+    color: white;
+    letter-spacing: 3px;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-toggle-label{
+    position: absolute;
+    top: 0;
+    left:0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: white; 
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position:relative;
+  }
+
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+  }
+
+  .nav-toggle-label span::before{
+    bottom: 7px;
+  }
+
+  .nav-toggle-label span::after{
+    top: 7px;
+  }
+
+  nav{
+    position: absolute;
+    text-align: left;
+    top:100%;
+    left: 0;
+    background-color: #03324C;
+    width: 100%;
+    transform: scale(1,0); 
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;  
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  nav li {
+    margin-bottom: 1em;
+    margin-left: 1em; 
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2 em;
+    text-transform: uppercase; 
+    opacity:0;
+    transition: opacity 150ms ease-in-out; /*animation*/
+  }
+
+  nav a:hover {
+    color: #F06639;
+  }
+
+  .nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+  }
+
+  .nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+
+/* TABLET */
+@media screen and (min-width: 600px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
   header img {
-   height: 50px;
+    height: 50px;
   }
 
   header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+  }
+
+  .title{
+    font-family: 'Ranchers', cursive;
+    font-size: 40px;
+    color: #03324C;
+    letter-spacing: 4px;
+  }
+
+  nav{
+    all: unset; /* (taking off the mobile version of it so links displayed) */
+    display: flex;
+    justify-content:center;
+    padding-right:30px;
+  }
+
+  nav a:hover{
+    color: #03324C;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+    font-size: 14px;
+  }
+
+}
+
+/* DESKTOP Changes when width gets larger than 768px.*/
+@media screen and (min-width: 768px) {
+   .nav-toggle-label {
+      display: none;
+    }
+    header img {
+      height: 50px;
+    }
+
+    header {
+      background-color: #03324C;
+      border: 6px solid #F06639;
       padding-top: 20px;
       padding-bottom: 20px;
       text-align: center;
       margin: 0px auto;
       display: block;
-  }
+    }
+
+    .title{
+      font-family: 'Ranchers', cursive;
+      color: #F06639;
+      font-size: 50px;
+      letter-spacing: 4px;
+    }
+
+    nav a:hover {
+      color: #F06639;
+    }
   
-  .title{
-      font-size: 30px;
-      color: white;
-  }
-  
-  nav{
+    nav{
       all: unset; /* (taking off the mobile version of it so links displayed) */
       display: flex;
       justify-content:center;
       padding-right:30px;
-
-  }
+    }
   
-  nav ul {
+    nav ul {
       display: flex;
-  }
+    }
   
-  nav li {
+    nav li {
       margin-left: 3em;
       margin-bottom: 0;
-  }
+    }
   
-  nav a {
+    nav a {
       opacity: 1;
       position: relative;
       font-size: 14px;
-  }
-  
-  /* nav a::before {
-      content: '';
-      display: block;
-      height: 5px;
-      background: black;
-      position: absolute;
-      top: -.75em;
-      left: 0;
-      right: 0;
-      transform: scale(0,1);
-      transition: transform ease-in-out 250ms;
-  }
-  
-   nav a:hover::before {
-      transform: scale(1,1);
-  }   */
+    }
+
 }
