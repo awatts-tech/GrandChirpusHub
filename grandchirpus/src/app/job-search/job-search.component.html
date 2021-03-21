@@ -1,38 +1,30 @@
-<style>
-    body  {
-      background-image: url('assets/images/header-image.jpg');
-    }
-</style>
-
 <body>
     
     <h1>Ready for your next <span>career</span>?</h1>
         
     <div class = "searchFields">
-        <div class = "row g-3">
+        <div id="inputs" class = "row g-3">
             <div class="col"> 
-            <input type="text" id="setSearchSuggestion" placeholder="Keyword" name="Keyword" [(ngModel)]="keyword"  class="form-control"/>
+            <input type="text" id="setSearchSuggestion" placeholder="Keyword" required name="Keyword" [(ngModel)]="keyword"  class="form-control" />
             </div>
             <div class="col">
-            <input type = "text" placeholder="State (VA) or Zipcode (20191)" name = "jobLocation" [(ngModel)]="jobLocation" class="form-control" />
+            <input type = "text" placeholder="State (VA) or Zipcode (20191)" required name = "jobLocation" [(ngModel)]="jobLocation" class="form-control" />
             </div>
             <div class="col">
             <input type ="dropdown" placeholder="Radius" name = "jobRadius" [(ngModel)]="jobRadius" class="form-control"/>
             </div>
         </div>
     </div>
+
     <div class ="center-button">
-        <button class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
+        <button id="submit-button" class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
     </div>
 
     <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
-     <app-job-item [job]="job"></app-job-item>   
+     <app-job-item [job]="job"></app-job-item> 
     </div>
-            <div id='description' *ngFor="let desc of careerOneService.jobDescList">
-                <div id='fullJobDescription'>Description: {{ desc.description }}</div>
 
-            </div>
-            
-    
-</body>
+    <div class="searchResults2">
+        <div id='description' > </div>
+    </div>
 

@@ -23,6 +23,7 @@ export class IndeedService {
   //empty array to hold the final results 
   public jobsList: JobSearch[] = [];
   public jobDescList: JobDescription[] = [];
+  public jobDesc = '' ;
 
   //the userID, TokenID and url for the API
   userID = "vDMCdyYaOSf6Ytb";
@@ -34,7 +35,7 @@ export class IndeedService {
   sortColumns:string = '0';
   sortOrder:string = '0';
   startRow:number = 0; 
-  pageSize:number = 50; 
+  pageSize:number = 4; 
   
   constructor(private http: HttpClient) { }
   
@@ -45,6 +46,7 @@ export class IndeedService {
   //function to pull in API information
   getJobs(keyword:string, jobLocation:string, jobRadius:string) {
 
+    //clearing the array in order to start with an empty array every search
     this.jobsList = [];
 
     //sets requestUrl by calling the getUrlWithAPIKey function to set the full API url
@@ -55,7 +57,6 @@ export class IndeedService {
       
       (response: any) => {
 
-        //console.log(response);
         //setting our local array equal to the response from the API
         this.jobs = response.Jobs;
 
@@ -72,9 +73,7 @@ export class IndeedService {
         //pushes jobResults object into the jobsList array
         this.jobsList.push(jobResults);
         
-      }
-
-      console.log(this.jobsList);
+        }
       },
       (error) => {
         console.error(error);
@@ -83,22 +82,32 @@ export class IndeedService {
     );
   }
 
+  //API call function to get the Job Description for whatever JobID is passed through
   getJobDescription(jobID){
     
+    //clearing the array in order to start with an empty array every search
     this.jobDescList = [];
 
+     //sets requestUrl by calling the getUrlWithAPIKey function to set the full API url
     const requestUrl = this.getUrlWithAPIKey()+'/' + jobID +'?isHtml=true&enableMetaData=false'; 
 
+    //http method to call the API with the header authorization
     this.http.get(requestUrl, {headers: {Authorization: 'Bearer ' + this.tokenKey, "Content-Type": "application/json"}}).subscribe(
       
       (response: any) => {
 
-        //console.log(response.Description);
-        const jobDescResults : JobDescription = {
-            description: response.Description
+        //set the response from the array to the jobDescResults object
+        const jobDescResults:JobDescription = { 
+          description: response.Description
         }
-        this.jobDescList.unshift(jobDescResults);
-        //console.log(this.jobDescList[0].description);
+        
+        //push the job jobDescResults object into the JobDescList array
+        this.jobDescList.push(jobDescResults);
+
+        //set the jobDesc variable equal to the jobDescList description at the 0 index of the array
+        this.jobDesc = this.jobDescList[0].description;
+        //console.log(this.jobDescList[0]);
+        //return this.test;
       },
       (error) => {
         console.error(error);
@@ -106,7 +115,6 @@ export class IndeedService {
       
     );
   }
-
 
   //function to return the full API URL with the required fields
   getUrlWithAPIKey() {
