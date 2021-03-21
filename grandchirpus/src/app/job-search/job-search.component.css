@@ -8,6 +8,7 @@ h1{
 
 body{
     height: 650px;
+    margin-top: 30px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
@@ -25,12 +26,6 @@ body{
     flex-direction: column;
 }
 
-.searchResults2{
-    border: 1px solid hotpink;
-    width: 100%;
-    display:flex;
-    justify-content: flex-end;
-}
 
 #jobResults{
     border: 1px solid black;
@@ -41,16 +36,40 @@ body{
     margin: 0;
 }
 
+/* .searchResults2{
+    border: 1px solid black;
+    width: 600px;
+    background-color: rgb(244,243,241);
+    font-size: 12px;
+    margin-top: -47%;
+    position: fixed;
+    height: 20px;
+    left:40%;
+}  */
+
 #description{
     border: 1px solid black;
     width: 600px;
     /* margin: 0; */
     background-color: rgb(244,243,241);
     font-size: 12px;
+    margin-top: -50%;
+    position: fixed;
+    overflow-y: auto;
+    height: 450px;
+    left:40%;
+    /* top: 100px; */
+    /* bottom:80%; */
+
 }
 
 @media screen and (max-width: 768px) {
 
+    
+    body{
+        margin-top: 40px;
+    }
+    
     h1{
         font-size: 30px;
     }
@@ -105,5 +124,6 @@ body{
         width: 100%;
         padding-right: 20px;
     }
+
 }
 
