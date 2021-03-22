@@ -2,7 +2,7 @@
   header{
     background-color: #F06639;
     border: 6px solid #03324C;
-    Font-family: Calistoga,sans-serif; 
+    Font-family: 'Calistoga',sans-serif; 
     top: 0;
     left: 0;
     right: 0;
@@ -13,7 +13,7 @@
   }
 
   .title{
-    font-family: 'Ranchers', cursive;
+    Font-family: 'Calistoga',sans-serif; 
     font-size: 20px;
     padding-top: 20px;
     color: white;
@@ -123,7 +123,7 @@
   }
 
   .title{
-    font-family: 'Ranchers', cursive;
+    Font-family: 'Calistoga',sans-serif; 
     font-size: 40px;
     color: #03324C;
     letter-spacing: 4px;
@@ -158,7 +158,7 @@
 }
 
 /* DESKTOP Changes when width gets larger than 768px.*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
    .nav-toggle-label {
       display: none;
     }
@@ -177,10 +177,10 @@
     }
 
     .title{
-      font-family: 'Ranchers', cursive;
+      Font-family: 'Calistoga',sans-serif; 
       color: #F06639;
       font-size: 50px;
-      letter-spacing: 4px;
+      /* letter-spacing: 4px; */
     }
 
     nav a:hover {
