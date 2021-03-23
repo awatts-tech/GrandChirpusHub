@@ -11,6 +11,11 @@ import { IndeedService } from '../indeed.service';
 })
 export class JobSearchComponent implements OnInit {
 
+  modalStyle = "none";
+  displayModal(){
+    document.getElementById("myModal").style.display = this.modalStyle;
+  }
+
   //these are the fields the user will be able to set in the webpage to run their search
    keyword:string = '';
    jobLocation:string = '';
@@ -59,4 +64,18 @@ export class JobSearchComponent implements OnInit {
     this.jobLocation='';
     this.jobRadius='';
   }
+
+  // When the user clicks on (x), close the window
+  closeDesc(){
+    document.getElementById("description").style.display = "none";
+  }
+
+
+
+// When the user clicks anywhere outside of the modal, close it
+  // window.onclick = function(event) {
+  //   if (event.target == this.modal) {
+  //     this.modal.style.display = "none";
+  //   }
+  // }
 }
