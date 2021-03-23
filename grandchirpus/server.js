@@ -1,19 +1,23 @@
-const port = process.env.PORT || 3000;
-
 const express = require('express');
 const app = express();
+const port = process.env.PORT || 5432;
 
-// const trivia = require('./trivia');
-// app.use('/', trivia);
+// Add cors here to allow to use across domain
+// names
+// api is now publicly available
+const cors = require("cors");
+app.use(cors());
 
-// app.get('/test', (req, res) => {
-// 	res.json('Woo hoo');
-// });
-app.use(express.static('public'))
+app.use(express.static(__dirname + "/public"));
+const routes = require("../routes");
 
-app.listen(port, () => {
-	console.log('Application started...');
-});
+app.use("/", routes);
+
+app.listen(port, () => console.log(`Listening on port: ${port}.`));
+
+//app.listen(port, () => {
+	//console.log('Application started...');
+//});
 
 
 
