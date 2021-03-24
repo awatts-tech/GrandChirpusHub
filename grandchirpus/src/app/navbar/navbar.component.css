@@ -17,7 +17,6 @@
     font-size: 20px;
     padding-top: 20px;
     color: white;
-    letter-spacing: 3px;
   }
 
   .nav-toggle {
@@ -105,7 +104,7 @@
   }
 
 /* TABLET */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .nav-toggle-label {
     display: none;
   }
@@ -126,7 +125,6 @@
     Font-family: 'Calistoga',sans-serif; 
     font-size: 40px;
     color: #03324C;
-    letter-spacing: 4px;
   }
 
   nav{

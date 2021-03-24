@@ -1,12 +1,18 @@
 .jobItem{
-    border: 5px solid #F06639;
+    border: 2px solid #F06639;
+    border-radius: 10px;
     list-style-type: none;
     padding: 20px;
     background-color: #03324cD9;
     Font-family: Calistoga,sans-serif;
     color: white;
     width: 350px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.jobItem a{
+    color: #F06639;
 }
 
 #jobDescButton{

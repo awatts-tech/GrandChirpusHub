@@ -21,10 +21,13 @@
     </div>
 
     <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
-     <app-job-item [job]="job"></app-job-item> 
+        <app-job-item [job]="job"></app-job-item> 
     </div>
 
-    <div class="searchResults2">
-        <div id='description' > </div>
+    <div class = "searchResults2">
+        <div id='description'>
+            <!-- <span class="close" (click)=closeDesc()>&times;</span>  -->
+        </div>
     </div>
+    <!-- </div> -->
 

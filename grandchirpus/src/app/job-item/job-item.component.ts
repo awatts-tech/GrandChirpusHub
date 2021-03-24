@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { IndeedService } from '../indeed.service';
+import { JobSearchComponent } from '../job-search/job-search.component';
 
 @Component({
   selector: 'app-job-item',
@@ -28,4 +29,5 @@ constructor(public careerOneService: IndeedService) { }
     //sets the description id in the HTML equal to the jobDesc Variable
     document.getElementById('description').innerHTML = jobDesc;
   }
+
 }

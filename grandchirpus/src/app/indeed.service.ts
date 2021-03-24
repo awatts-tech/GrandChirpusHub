@@ -30,12 +30,12 @@ export class IndeedService {
   tokenKey = "dJANrAPBguLXOcJzBSNLBKrqqiKt4O6PKwbd4Z33EedMhEBZnU4vxtbysDraVqWcOF3EeRMYjuxc7kaqsC+x8Q==";
   url = "https://api.careeronestop.org/v1/jobsearch/";
 
-  //required fields for the API URL that are set to default values
+  //required fields for the API URL that are set to default (hardcoded) values
   days:number = 0;
   sortColumns:string = '0';
   sortOrder:string = '0';
   startRow:number = 0; 
-  pageSize:number = 4; 
+  pageSize:number = 50; 
   
   constructor(private http: HttpClient) { }
   

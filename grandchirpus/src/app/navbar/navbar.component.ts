@@ -12,6 +12,17 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
   
+  redirectAlert(){
+    let redirect = confirm("You are being re-directed to https://www.grandcircus.co/");
+    console.log(redirect);
+    if(redirect === true){
+      location.href = 'https://www.grandcircus.co/';
+ 
+    }else{
+      window.stop();
 
+    }
+    
+  }
 
 }
