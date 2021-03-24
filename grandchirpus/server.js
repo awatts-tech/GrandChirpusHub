@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 5432;
+const port = 5432;
 
 // Add cors here to allow to use across domain
 // names
@@ -14,6 +14,12 @@ const routes = require("../routes");
 app.use("/", routes);
 
 app.listen(port, () => console.log(`Listening on port: ${port}.`));
+
+const employernetwork = ["Ally Financial", "BCBSM"]
+
+app.get("./employernetwork", (req, res) => {
+	res.json(employernetwork)
+});
 
 //app.listen(port, () => {
 	//console.log('Application started...');

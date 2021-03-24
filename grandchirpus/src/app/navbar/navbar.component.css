@@ -68,7 +68,7 @@
     width: 100%;
     transform: scale(1,0); 
     transform-origin: top;
-    transition: transform 400ms ease-in-out;  
+    transition: transform 400ms ease-in-out; 
   }
 
   nav ul {
@@ -88,7 +88,7 @@
     font-size: 1.2 em;
     text-transform: uppercase; 
     opacity:0;
-    transition: opacity 150ms ease-in-out; /*animation*/
+    transition: opacity 150ms ease-in-out;
   }
 
   nav a:hover {
