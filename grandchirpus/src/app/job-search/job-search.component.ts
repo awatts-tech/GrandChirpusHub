@@ -7,37 +7,36 @@ import { IndeedService } from '../indeed.service';
   selector: 'app-job-search',
   templateUrl: './job-search.component.html',
   styleUrls: ['./job-search.component.css'],
-  providers: []
+  providers: [],
 })
 export class JobSearchComponent implements OnInit {
-
-  modalStyle = "none";
-  displayModal(){
-    document.getElementById("myModal").style.display = this.modalStyle;
+  modalStyle = 'none';
+  displayModal() {
+    document.getElementById('myModal').style.display = this.modalStyle;
   }
 
   //these are the fields the user will be able to set in the webpage to run their search
-   keyword:string = '';
-   jobLocation:string = '';
-   jobRadius:string = '';
+  keyword: string = '';
+  jobLocation: string = '';
+  jobRadius: string = '';
 
   //array of strings to be shown in the Keyword search on the JobSearch Page
-   searchSuggestions = [
-    "Try searching for Developer...",
-    "Try searching for Programmer...",
-    "Try searching for Analyst...",
-    "Try searching for Data Scientist...",
-    "Try searching for Architect...",
-    "Try searching for Mobile Developer...",
-    "Try searching for JavaScript Developer...",
-    "Try searching for Full-Stack Developer...",
-    "Try searching for Front-End Developer...",
-    "Try searching for Back-End Developer...",
-    "Try searching for Angular Developer...",
-    "Try searching for Software Engineer..."
+  searchSuggestions = [
+    'Try searching for Developer...',
+    'Try searching for Programmer...',
+    'Try searching for Analyst...',
+    'Try searching for Data Scientist...',
+    'Try searching for Architect...',
+    'Try searching for Mobile Developer...',
+    'Try searching for JavaScript Developer...',
+    'Try searching for Full-Stack Developer...',
+    'Try searching for Front-End Developer...',
+    'Try searching for Back-End Developer...',
+    'Try searching for Angular Developer...',
+    'Try searching for Software Engineer...',
   ];
 
-  constructor(public careerOneService: IndeedService) { }
+  constructor(public careerOneService: IndeedService) {}
 
   //runs the search Suggestion button on init
   ngOnInit(): void {
@@ -45,34 +44,39 @@ export class JobSearchComponent implements OnInit {
   }
 
   //function to randomly change the keyword search box
-  setSearchSuggestion(){
+  setSearchSuggestion() {
     //sets search term to a random item in the searchSuggestions array
-    const searchTerm = this.searchSuggestions[Math.floor(Math.random()* this.searchSuggestions.length)];
-    
+    const searchTerm = this.searchSuggestions[
+      Math.floor(Math.random() * this.searchSuggestions.length)
+    ];
+
     //changes the placeholder on the searchSuggestions id in the HTML to the searchTerm Variable
-    (<HTMLInputElement>document.getElementById("setSearchSuggestion")).placeholder= searchTerm;
+    (<HTMLInputElement>(
+      document.getElementById('setSearchSuggestion')
+    )).placeholder = searchTerm;
   }
 
   //function to call the API for getting the jobs
-  getJobResults(){
-
+  getJobResults() {
     //calls the getJobs API with the 3 search terms we selected
-    this.careerOneService.getJobs(this.keyword, this.jobLocation, this.jobRadius);
+    this.careerOneService.getJobs(
+      this.keyword,
+      this.jobLocation,
+      this.jobRadius
+    );
 
     //sets all of the following variables back to an empty string so they disappear from the search boxes
-    this.keyword='';
-    this.jobLocation='';
-    this.jobRadius='';
+    this.keyword = '';
+    this.jobLocation = '';
+    this.jobRadius = '';
   }
 
   // When the user clicks on (x), close the window
-  closeDesc(){
-    document.getElementById("description").style.display = "none";
+  closeDesc() {
+    document.getElementById('description').style.display = 'none';
   }
 
-
-
-// When the user clicks anywhere outside of the modal, close it
+  // When the user clicks anywhere outside of the modal, close it
   // window.onclick = function(event) {
   //   if (event.target == this.modal) {
   //     this.modal.style.display = "none";

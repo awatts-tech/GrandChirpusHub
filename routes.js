@@ -1,34 +1,36 @@
-// // 
-// const express = require('express');
-// const { Connection } = require('pg');
-// const routes = express.Router();
-// const pool = require ("./connection");
 
-// // logic for our endpoints
-// const planets = [
-// 	{
-// 		name: 'Mercury',
-// 		color: 'Gray',
-// 	},
-// 	{
-// 		name: 'Venus',
-// 		color: 'Yellow',
-// 	},
-// 	{
-// 		name: 'Earth',
-// 		color: 'Blue',
-// 	},
-// 	{
-// 		name: 'Mars',
-// 		color: 'Red',
-// 	},
-// ];
+const express = require('express');
+const routes = express.Router();
+const pool = require ("./connection");//connection pool for PG database
+const { Connection } = require('pg');
+// logic for our endpoints
+//const employernetwork = [];
 
-// routes.get('/planets', (req, res) => {
-//     pool.query("SELECT * FROM planets;").then( (results) => {
-//         res.json(results.rows);
-//     })
-// });
+
+// function getTable(req, res) {
+//     pool.query("select * from employernetwork order by id").then(result =>
+//     {
+//     res.json(result.rows);
+//     });
+//     }
+
+routes.get('/employernetwork', (req, res) => {
+    console.log("hit employernetwork")
+    pool.query("SELECT * FROM employernetwork;").then( (results) => {
+        res.json("getting all employers...");
+    })
+});
+
+// make the DB data match the front end format
+//const employernetwork = results.rows.map((result) => {
+//    const newResult = result;
+
+   // console.log(result.rows);
+
+//});
+
+module.exports = routes;
+
 
 // routes.get('/planets', (_, res) => {
 // 	res.json(planets);
@@ -69,7 +71,7 @@
 // 	}
 // });
 // // export module so it's usable in other files
-// module.exports = routes;
+
 
 // routes.delete('/planets/:id', (req, res) => {
 //     const id = req.params.id;
