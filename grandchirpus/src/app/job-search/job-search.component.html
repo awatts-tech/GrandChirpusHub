@@ -8,10 +8,10 @@
             <input type="text" id="setSearchSuggestion" placeholder="Keyword" required name="Keyword" [(ngModel)]="keyword"  class="form-control" />
             </div>
             <div class="col">
-            <input type = "text" placeholder="State (VA) or Zipcode (20191)" required name = "jobLocation" [(ngModel)]="jobLocation" class="form-control" />
+            <input type = "text" id="jobLocation" placeholder="State (VA) or Zipcode (20191)" required name = "jobLocation" [(ngModel)]="jobLocation" class="form-control" />
             </div>
             <div class="col">
-            <input type ="dropdown" placeholder="Radius" name = "jobRadius" [(ngModel)]="jobRadius" class="form-control"/>
+            <input type ="dropdown" id="jobRadius" placeholder="Radius" name = "jobRadius" [(ngModel)]="jobRadius" class="form-control"/>
             </div>
         </div>
     </div>
@@ -26,8 +26,7 @@
 
     <div class = "searchResults2">
         <div id='description'>
-            <!-- <span class="close" (click)=closeDesc()>&times;</span>  -->
+            <!-- <span class="close" (click)=closeDesc()>&times;</span> -->
         </div>
     </div>
-    <!-- </div> -->
-
+    

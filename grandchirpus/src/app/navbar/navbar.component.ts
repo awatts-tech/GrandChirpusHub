@@ -19,8 +19,7 @@ export class NavbarComponent implements OnInit {
       location.href = 'https://www.grandcircus.co/';
  
     }else{
-      window.stop();
-
+      window.location.reload(false);
     }
     
   }
