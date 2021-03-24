@@ -1,193 +1,303 @@
-body  {
-    background-image: linear-gradient(to bottom right, #bbe3f7,#005a87);
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+ body{
+    background-image: linear-gradient(to bottom left, #bbe3f7,#005a87);
+    justify-content: center;
+    align-content: center;
+    min-height: 100%;
+    width: 100%;
+    height: auto; 
+    margin:0;
+}  
+#quote{
+  padding-top: 50px;
+  font-size: 20px;
+}
 
-/* quote */
+br{
+  display: none;
+}
+
 span{
   background-color: #F06639;
 }
 
-/*picture box styling */
-h1.display-2 {
-  font-size: 30px;
-}
-
-h1.display-4 {
- text-align: center;
+#title {
+  text-align: center;
   color: black;
   font-weight: bold;
-}
-div.card-group {
-  padding-left: 100px;
-}
-
-div.card {
-  width: 300px;
-}
-
-div.card-body {
-  text-align: center;
-}
-
-p{
-  text-align: center;
-  font-weight: bold;
-}
-
-/* links */
-.box{
-  margin: auto;
-  width: 50%;
-}
-
-a:link, a:visited {
-  background-color: #F06639;
-  color: white;
-  padding: 20px 50px;  
-  text-align: center;
-  text-decoration: none;
-  display: inline-block; 
-}
-
-a:hover, a:active {
-  background-color: #1de5f3;
-  /* background-color: #007CBA; */
-}
-
-/* MCWT IMAGE */
-img {
-  background: white;
-  padding-right: 10px;
-}
-
- .bird {
-  display: none;
+  font-size: 40px;
 } 
 
-/* TABLET */
-@media screen and (min-width: 600px) {
-/* quote */
-span{
+#header {
+  text-align: center;
+   color: black;
+   font-weight: bold;
+   /* padding-right: 130px; */
+   font-size: 50px;
+   padding-bottom: 20px;
+ }
+
+#grid-container {
+  display: grid; 
+  align-content: space-evenly;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
   background-color: #F06639;
-}
-/* div.container{
-  padding-top: 50px;
-  background-image: linear-gradient(to bottom right, #bbe3f7,#005a87); 
-  padding-bottom: 10px;
-  width: 100%;
-  margin: 0;
-} */
-/*picture box styling */
-h1.display-2 {
-  font-size: 30px;
+  padding: 10px;
+  padding-top: 40px;
+  justify-content: center;
 }
 
-h1.display-4 {
- text-align: center;
-  color: black;
-  font-weight: bold;
-}
-/* div.card-group {
-  padding-left: 100px;
-} */
-
-/* div.card {
-  width: 300px;
-} */
-
-div.card-body {
+#card1 #card2 #card3 #card4 #card5 #card6 {
   text-align: center;
-}
-
-p{
-  text-align: center;
-  font-weight: bold;
-}
-
-/* links */
-.box{
+  padding: 20px 0;
+  font-size: 20px;
+  }
+  
+  #box {
   margin: auto;
   width: 50%;
-}
+  padding-bottom: 30px;
+  } 
 
-a:link, a:visited {
+  .bird {
+  display: none;
+ } 
+
+#box2 {
+  margin: auto;
+  width: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+  
+  a:link, a:visited {
   background-color: #F06639;
   color: white;
   padding: 20px 50px;  
   text-align: center;
   text-decoration: none;
   display: inline-block; 
+  } 
+  
+  a:hover, a:active {
+  background-color: #1de5f3;
+  } 
+  
+  #MCWTcontainer{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  #MCWT {
+  padding-right: 10px; 
+  background: white;
+  width: 450px;
+  } 
+  
+
+/* TABLET */
+@media screen and (min-width: 768px) {
+
+ 
+  body{
+    justify-content: center;
+    align-content: center;
+    padding-left: 80px; 
+    min-height: 100%;
+    min-width: 1100px;
+    width: 100%;
+    height: auto;
+}  
+
+.blockquote{
+  padding-top: 50px;
 }
+
+
+span{
+  background-color: #F06639;
+}
+
+br{
+  display: none;
+}
+
+#title {
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  padding-right: 70px;
+} 
+
+#header {
+    text-align: center;
+     color: black;
+     font-weight: bold;
+     padding-right: 130px;
+     font-size: 70px;
+     padding-bottom: 20px;
+   }
+
+
+.bird {
+   display: none; 
+} 
+
+#grid-container {
+  display: grid; 
+  height: 700px;
+  width: 900px;
+  align-content: space-evenly;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #F06639;
+  padding: 10px;
+  padding-top: 40px;
+  padding-left: 40px;
+  justify-content: center;
+}
+
+#card1 #card2 #card3 #card4 #card5 #card6 {
+text-align: center;
+padding: 20px 0;
+font-size: 30px;
+}
+
+#box {
+margin: auto;
+width: 50%;
+padding-left: 60px;
+padding-bottom: 30px;
+} 
+
+#box2 {
+margin: auto;
+width: 50%;
+padding-left: 50px;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+a:link, a:visited {
+background-color: #F06639;
+color: white;
+padding: 20px 50px;  
+text-align: center;
+text-decoration: none;
+display: inline-block; 
+} 
 
 a:hover, a:active {
-  background-color: #1de5f3;
-  /* background-color: #007CBA; */
+background-color: #1de5f3;
+} 
+
+#MCWTcontainer{
+  display: grid;
+  align-content: space-evenly;
+  justify-content: center;
+  width: 1000px;
+  height: 300px;
+  padding-left: 60px;
 }
 
-/* MCWT IMAGE */
-img {
-  background: white;
-  padding-right: 10px;
-}
-
-/* .bird {
-  display:none;
-} */
+#MCWT {
+padding-left: 110px;
+padding-right: 120px;
+background: white;
+width: 850px;
+} 
 
 }
 
 /* DESKTOP */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
  
+  body{
+    justify-content: center;
+    align-content: center;
+    padding-left: 80px;
+    height: 100%;
+    margin: 0;
+  }
+  .blockquote{
+    display: none;
+  }
 
- div.container{
-  padding-top: 10px;
-  margin: 0;
-} 
+  #title {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    padding-top: 100px;
+  } 
 
-.display-2 {
-  display: none;
-}
+  #header {
+      text-align: center;
+       color: black;
+       font-weight: bold;
+       padding-right: 130px;
+       font-size: 70px;
+       padding-bottom: 20px;
+     }
+  
 
+  .bird {
+    display: flex; 
+    float: right;
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    padding-right: 20px;
+    padding-top: 10px;
+  } 
 
-/*picture box styling */
-  h1.display-2 {
+  #grid-container {
+    display: grid;
+    height: 800px;
+    width: 1000px;
+    align-content: space-evenly;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: #F06639;
+    padding: 10px;
+    padding-top: 40px;
+    padding-left: 20px;
+    justify-content: center;
+  }
+
+#card1 #card2 #card3 #card4 #card5 #card6 {
+  text-align: center;
+  padding: 20px 0;
   font-size: 30px;
 }
 
-h1.display-4 {
- text-align: center;
-  color: black;
+ #Affinity {
+  /* text-align: center;  */
   font-weight: bold;
-} 
- div.card-group {
-  /* padding-left: 100px; */
-   margin: 0;
-} 
+  font-size: 20px;
+}   
 
-  div.card {
-   width: 200px; 
-   height: 200px;
-   max-width: 100%;
-   height: auto;
-}  
-
- div.card-body {
-  text-align: center;
-}
-
-p{
-  text-align: center;
-  font-weight: bold;
-}  
-
-/* links */
- .box{
+ #box {
   margin: auto;
   width: 50%;
+  padding-left: 60px;
+  padding-bottom: 30px;
 } 
+
+#box2 {
+  margin: auto;
+  width: 50%;
+  padding-right: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
  a:link, a:visited {
   background-color: #F06639;
@@ -200,21 +310,22 @@ p{
 
  a:hover, a:active {
   background-color: #1de5f3;
-   background-color: #007CBA; 
 } 
 
-/* MCWT IMAGE */
-img {
-  background: white;
-} 
-
-  .bird {
-    display: flex; 
-    float: right;
-    width: 300px;
+#MCWTcontainer{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: center;
+    width: 1000px;
     height: 300px;
-    background: transparent;
-    padding-right: 20px;
-  } 
+    padding-left: 100px;
+}
+
+#MCWT {
+  padding-left: 110px;
+  padding-right: 120px;
+  background: white;
+  width: 850px;
+} 
 
 } 

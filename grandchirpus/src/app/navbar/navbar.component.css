@@ -13,11 +13,10 @@
   }
 
   .title{
-    font-family: 'Ranchers', cursive;
+    Font-family: 'Calistoga',sans-serif; 
     font-size: 20px;
     padding-top: 20px;
     color: white;
-    letter-spacing: 3px;
   }
 
   .nav-toggle {
@@ -68,7 +67,7 @@
     width: 100%;
     transform: scale(1,0); 
     transform-origin: top;
-    transition: transform 400ms ease-in-out;  
+    transition: transform 400ms ease-in-out; 
   }
 
   nav ul {
@@ -88,7 +87,7 @@
     font-size: 1.2 em;
     text-transform: uppercase; 
     opacity:0;
-    transition: opacity 150ms ease-in-out; /*animation*/
+    transition: opacity 150ms ease-in-out;
   }
 
   nav a:hover {
@@ -105,7 +104,7 @@
   }
 
 /* TABLET */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .nav-toggle-label {
     display: none;
   }
@@ -123,10 +122,9 @@
   }
 
   .title{
-    font-family: 'Ranchers', cursive;
+    Font-family: 'Calistoga',sans-serif; 
     font-size: 40px;
     color: #03324C;
-    letter-spacing: 4px;
   }
 
   nav{
@@ -158,7 +156,7 @@
 }
 
 /* DESKTOP Changes when width gets larger than 768px.*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
    .nav-toggle-label {
       display: none;
     }
@@ -177,10 +175,10 @@
     }
 
     .title{
-      font-family: 'Ranchers', cursive;
+      Font-family: 'Calistoga',sans-serif; 
       color: #F06639;
       font-size: 50px;
-      letter-spacing: 4px;
+      /* letter-spacing: 4px; */
     }
 
     nav a:hover {
