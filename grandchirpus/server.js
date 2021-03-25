@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 5432;
+const port = process.env.PORT||3000;
 
 // Add cors here to allow to use across domain
 // names
@@ -9,21 +9,21 @@ const cors = require("cors");
 app.use(cors());
 
 app.use(express.static(__dirname + "/public"));
-const routes = require("../routes");
+// const routes = require("../routes");
 
-app.use("/", routes);
+// app.use("/", routes);
 
-app.listen(port, () => console.log(`Listening on port: ${port}.`));
+// app.listen(port, () => console.log(`Listening on port: ${port}.`));
 
-const employernetwork = ["Ally Financial", "BCBSM"]
+// const employernetwork = ["Ally Financial", "BCBSM"]
 
-app.get("./employernetwork", (req, res) => {
-	res.json(employernetwork)
+// app.get("./employernetwork", (req, res) => {
+// 	res.json(employernetwork)
+// });
+
+app.listen(port, () => {
+	console.log('Application started...');
 });
-
-//app.listen(port, () => {
-	//console.log('Application started...');
-//});
 
 
 
