@@ -1,124 +1,22 @@
- body{
-    background-image: linear-gradient(to bottom left, #bbe3f7,#005a87);
-    justify-content: center;
-    align-content: center;
-    min-height: 100%;
-    width: 100%;
-    height: auto; 
-    margin:0;
-}  
-#quote{
-  padding-top: 50px;
-  font-size: 20px;
-}
-
-br{
-  display: none;
-}
-
-span{
-  background-color: #F06639;
-}
-
-#title {
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  font-size: 40px;
-} 
-
-#header {
-  text-align: center;
-   color: black;
-   font-weight: bold;
-   /* padding-right: 130px; */
-   font-size: 50px;
-   padding-bottom: 20px;
- }
-
-#grid-container {
-  display: grid; 
-  align-content: space-evenly;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
-  background-color: #F06639;
-  padding: 10px;
-  padding-top: 40px;
+body{
+  background-image: linear-gradient(to bottom left, #bbe3f7,#005a87);
+  overflow: auto;
+  height: 100%;
+  margin: 0;
+  width:100%;
   justify-content: center;
+  align-content: center;
+  padding-left: 80px;
+  padding-right: 80px;  
+  
 }
-
-#card1 #card2 #card3 #card4 #card5 #card6 {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 20px;
-  }
-  
-  #box {
-  margin: auto;
-  width: 50%;
-  padding-bottom: 30px;
-  } 
-
-  .bird {
-  display: none;
- } 
-
-#box2 {
-  margin: auto;
-  width: 50%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  }
-  
-  a:link, a:visited {
-  background-color: #F06639;
-  color: white;
-  padding: 20px 50px;  
-  text-align: center;
-  text-decoration: none;
-  display: inline-block; 
-  } 
-  
-  a:hover, a:active {
-  background-color: #1de5f3;
-  } 
-  
-  #MCWTcontainer{
-    display: grid;
-    align-content: space-evenly;
-    justify-content: center;
-    width: 500px;
-    height: 300px;
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  #MCWT {
-  padding-right: 10px; 
-  background: white;
-  width: 450px;
-  } 
-  
-
-/* TABLET */
-@media screen and (min-width: 768px) {
-
- 
-  body{
-    justify-content: center;
-    align-content: center;
-    padding-left: 80px; 
-    min-height: 100%;
-    min-width: 1100px;
-    width: 100%;
-    height: auto;
-}  
 
 .blockquote{
-  padding-top: 50px;
+  padding-top: 70px;
 }
-
+#quote{
+  font-size: 20px;
+}
 
 span{
   background-color: #F06639;
@@ -127,205 +25,313 @@ span{
 br{
   display: none;
 }
-
-#title {
-  text-align: center;
-  color: black;
-  font-weight: bold;
-  font-size: 50px;
-  padding-right: 70px;
-} 
-
-#header {
-    text-align: center;
-     color: black;
-     font-weight: bold;
-     padding-right: 130px;
-     font-size: 70px;
-     padding-bottom: 20px;
-   }
-
 
 .bird {
    display: none; 
 } 
 
-#grid-container {
-  display: grid; 
-  height: 700px;
-  width: 900px;
-  align-content: space-evenly;
-  grid-template-columns: auto auto auto;
-  grid-gap: 10px;
+ul {
   background-color: #F06639;
-  padding: 10px;
-  padding-top: 40px;
-  padding-left: 40px;
-  justify-content: center;
-}
-
-#card1 #card2 #card3 #card4 #card5 #card6 {
-text-align: center;
-padding: 20px 0;
-font-size: 30px;
-}
-
-#box {
-margin: auto;
-width: 50%;
-padding-left: 60px;
-padding-bottom: 30px;
-} 
-
-#box2 {
-margin: auto;
-width: 50%;
-padding-left: 50px;
-padding-top: 30px;
-padding-bottom: 30px;
-}
-
-a:link, a:visited {
-background-color: #F06639;
-color: white;
-padding: 20px 50px;  
-text-align: center;
-text-decoration: none;
-display: inline-block; 
-} 
-
-a:hover, a:active {
-background-color: #1de5f3;
-} 
-
-#MCWTcontainer{
   display: grid;
-  align-content: space-evenly;
-  justify-content: center;
-  width: 1000px;
-  height: 300px;
-  padding-left: 60px;
+  flex-direction: row;
+   grid-gap: 1em;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  list-style: none;
+  padding-bottom: 40px;  
+ 
 }
 
-#MCWT {
-padding-left: 110px;
-padding-right: 120px;
-background: white;
-width: 850px;
+#title {
+  text-align: center;
+  width:100%;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 50px;
+  padding-bottom: 20px;
 } 
 
+img {
+  width: 100%;
+  height: 100%; 
+  padding-bottom: 10px; 
+  padding-top: 30px; 
 }
+
+.caption {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#header {
+    text-align: center;
+     color: black;
+     font-weight: bold;
+     font-size: 30px;
+     padding-bottom: 20px;
+   }
+
+ #Affinity {
+    font-weight: bold;
+    font-size: 12px;
+}   
+
+  #box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+  #box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  a:link, a:visited {
+    padding: 10px 20px; 
+    background-color: #F06639;
+    color: white;
+    text-align: center; 
+    text-decoration: none;
+} 
+
+  a:hover, a:active {
+    background-color: #1de5f3;
+  } 
+
+  #MCWTcontainer{
+    justify-content: center;
+}
+
+  #MCWT {
+    background: white;
+}   
+ 
+  
+
+/* TABLET */
+  @media screen and (min-width: 768px) { 
+
+body{
+  background-image: linear-gradient(to bottom left, #bbe3f7,#005a87);
+  justify-content: center;
+  align-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  height: 100%;
+  margin: 0;
+}
+.blockquote{
+  padding-top: 70px;
+}
+#quote{
+  font-size: 20px;
+}
+
+span{
+  background-color: #F06639;
+}
+
+br{
+  display: none;
+}
+
+.bird {
+   display: none; 
+} 
+
+
+ul {
+  background-color: #F06639;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(3, minmax(1px, 100%));
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  list-style: none;
+  padding-bottom: 40px;
+}
+
+
+#title {
+  text-align: center;
+  width:100%;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  padding-bottom: 50px;
+  padding-bottom: 20px;
+} 
+
+img {
+  width: 100%;
+  height: 100%; 
+  padding-bottom: 10px; 
+  padding-top: 30px; 
+}
+
+.caption {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#header {
+    text-align: center;
+     color: black;
+     font-weight: bold;
+     font-size: 70px;
+     padding-bottom: 20px;
+   }
+
+ #Affinity {
+    font-weight: bold;
+    font-size: 20px;
+}   
+
+  #box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+
+  #box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  a:link, a:visited {
+    padding: 20px 50px; 
+    background-color: #F06639;
+    color: white;
+    text-align: center; 
+    text-decoration: none;
+} 
+
+  a:hover, a:active {
+    background-color: #1de5f3;
+  } 
+
+  #MCWTcontainer{
+    justify-content: center;
+}
+
+  #MCWT {
+    background: white;
+}   
+
+  }
+
 
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
  
   body{
+    background-image: linear-gradient(to bottom left, #bbe3f7,#005a87);
     justify-content: center;
     align-content: center;
     padding-left: 80px;
+    padding-right: 80px;
     height: 100%;
     margin: 0;
   }
+
   .blockquote{
     display: none;
   }
 
-  #title {
-    text-align: center;
-    color: black;
-    font-weight: bold;
-    font-size: 50px;
-    padding-top: 100px;
-  } 
-
-  #header {
-      text-align: center;
-       color: black;
-       font-weight: bold;
-       padding-right: 130px;
-       font-size: 70px;
-       padding-bottom: 20px;
-     }
+  ul {
+    background-color: #F06639;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3, minmax(1px, 100%));
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    list-style: none;
+    padding-bottom: 40px;
+  }
   
-
   .bird {
     display: flex; 
     float: right;
     width: 300px;
     height: 300px;
     background: transparent;
-    padding-right: 20px;
-    padding-top: 10px;
-  } 
+    padding-right: 15px;
+    padding-top: 15px;
+  }  
 
-  #grid-container {
-    display: grid;
-    height: 800px;
-    width: 1000px;
-    align-content: space-evenly;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    background-color: #F06639;
-    padding: 10px;
-    padding-top: 40px;
-    padding-left: 20px;
-    justify-content: center;
+  #title {
+    text-align: center;
+    width:100%;
+    padding-left: 250px;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    padding-bottom: 150px;
+    padding-top: 110px;
+  } 
+  
+  img {
+    width: 100%;
+    height: 100%; 
+    padding-bottom: 10px; 
+    padding-top: 30px; 
   }
 
-#card1 #card2 #card3 #card4 #card5 #card6 {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
+  .caption {
+    font-weight: bold;
+    font-size: 13px;
+  }
 
- #Affinity {
-  /* text-align: center;  */
-  font-weight: bold;
-  font-size: 20px;
-}   
+  #header {
+      text-align: center;
+       color: black;
+       font-weight: bold;
+       font-size: 70px;
+       padding-bottom: 20px;
+     }
 
- #box {
-  margin: auto;
-  width: 50%;
-  padding-left: 60px;
-  padding-bottom: 30px;
-} 
+   #Affinity {
+      font-weight: bold;
+      font-size: 20px;
+  }   
 
-#box2 {
-  margin: auto;
-  width: 50%;
-  padding-right: 100px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
+    #box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }  
 
- a:link, a:visited {
-  background-color: #F06639;
-  color: white;
-  padding: 20px 50px;  
-  text-align: center;
-  text-decoration: none;
-  display: inline-block; 
-} 
+    #box2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } 
 
- a:hover, a:active {
-  background-color: #1de5f3;
-} 
+    a:link, a:visited {
+      padding: 20px 50px; 
+      background-color: #F06639;
+      color: white;
+      text-align: center; 
+      text-decoration: none;
+  } 
 
-#MCWTcontainer{
-    display: grid;
-    align-content: space-evenly;
-    justify-content: center;
-    width: 1000px;
-    height: 300px;
-    padding-left: 100px;
-}
+    a:hover, a:active {
+      background-color: #1de5f3;
+    } 
 
-#MCWT {
-  padding-left: 110px;
-  padding-right: 120px;
-  background: white;
-  width: 850px;
-} 
+    #MCWTcontainer{
+      justify-content: center;
+  }
+
+    #MCWT {
+      background: white;
+  }   
 
 } 

@@ -1,19 +1,25 @@
-<section>
-<div class ="button-container1">
-  <button class="basicRandom" (click)="basicRandom(); basicAnswersRandom()">
-    Basic Interview Question
-  </button>
-  </div>
 
-  <div class ="button-container2">
-  <button class="technicalRandom"(click)="technicalRandom(); technicalRandomAnswers()">
-    Technical Interview Question
-</button>    
-</div>
+
+<!--Grant Chirpus Image  -->
+<body>
+<section>
+
+  <img src="assets/images/interview.gif" />
 </section>
 
-<div class="questionsFlipCards">
+  
 
+<div class="questionsFlipCards" id ="center">
+
+
+<div class = "main1">
+  <div class ="button-container1">
+    <button class="basicRandom" (click)="basicRandom(); basicAnswersRandom()">
+      Basic Interview Question
+    </button>
+    </div>
+
+  
 
   <div class="scene scene--card ">
     <div class="card" (click)="flip()">
@@ -28,10 +34,18 @@
     </div>
     <p>Click card to see answer.</p>
   </div>
-           
-          <!--Grant Chirpus Image  -->
-  <img src="assets/images/image001.gif" />
 
+</div>
+
+
+<div class = "main2">
+
+  <div class ="button-container2">
+    <button class="technicalRandom"(click)="technicalRandom(); technicalRandomAnswers()">
+      Technical Interview Question
+  </button>    
+  </div>
+           
 
   <div class="scene scene--card">
     <div class="card2" (click)="flip2()">
@@ -47,3 +61,6 @@
   </div>
          
 </div>
+</div>
+
+</body>
