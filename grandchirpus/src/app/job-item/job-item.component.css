@@ -4,11 +4,15 @@
     list-style-type: none;
     padding: 20px;
     background-color: #03324cD9;
-    Font-family: Calistoga,sans-serif;
+    Font-family: 'Calistoga',sans-serif;
+    font-size: 14px;
     color: white;
-    width: 350px;
+    width: 100%;
+    padding-right: 20px;
     margin-bottom: 15px;
+    margin-right: 0;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-bottom: 20px;
 }
 
 .jobItem a{
@@ -17,31 +21,51 @@
 
 #jobDescButton{
     margin-top: 10px;
+    font-size: 14px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 
     .jobItem{
-        border: 5px solid #F06639;
+        border: 2px solid #F06639;
+        border-radius: 10px;
         list-style-type: none;
-        color: white;
+        padding: 20px;
         background-color: #03324cD9;
-        width: 100%;
-        padding-right: 20px;
+        Font-family: 'Calistoga',sans-serif;
+        color: white;
+        font-size: 16px;
+        width: 350px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #jobDescButton{
+        margin-top: 10px;
+        font-size: 16px;
     }
 
 }
 
 
-@media screen and (max-width: 360px){
+@media screen and (min-width: 1200px){
 
     .jobItem{
-        border: 5px solid #F06639;
+        border: 2px solid #F06639;
+        border-radius: 10px;
         list-style-type: none;
-        color: white;
+        padding: 20px;
         background-color: #03324cD9;
-        width: 100%;
-        padding-right: 20px;
+        Font-family: 'Calistoga',sans-serif;
+        color: white;
+        width: 350px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    #jobDescButton{
+        margin-top: 10px;
+        font-size: 16px;
     }
 
 }

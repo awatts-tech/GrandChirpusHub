@@ -2,7 +2,7 @@
   header{
     background-color: #F06639;
     border: 6px solid #03324C;
-    Font-family: 'Calistoga',sans-serif; 
+    font-family: 'Calistoga',sans-serif; 
     top: 0;
     left: 0;
     right: 0;
@@ -13,7 +13,11 @@
   }
 
   .title{
+<<<<<<< HEAD
+    font-family: 'Calistoga',sans-serif;  
+=======
     Font-family: 'Calistoga',sans-serif; 
+>>>>>>> 56ce2327344ff2b4d9191b0e9122531048154589
     font-size: 20px;
     padding-top: 20px;
     color: white;
@@ -122,7 +126,11 @@
   }
 
   .title{
+<<<<<<< HEAD
+    font-family: 'Calistoga',sans-serif; 
+=======
     Font-family: 'Calistoga',sans-serif; 
+>>>>>>> 56ce2327344ff2b4d9191b0e9122531048154589
     font-size: 40px;
     color: #03324C;
   }
@@ -175,7 +183,11 @@
     }
 
     .title{
+<<<<<<< HEAD
+      font-family: 'Calistoga',sans-serif;  
+=======
       Font-family: 'Calistoga',sans-serif; 
+>>>>>>> 56ce2327344ff2b4d9191b0e9122531048154589
       color: #F06639;
       font-size: 50px;
       /* letter-spacing: 4px; */
