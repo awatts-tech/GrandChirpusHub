@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const express = require('express');
 const app = express();
 const port = process.env.PORT||3000;
@@ -35,9 +34,6 @@ app.listen(port, () => {
 // const express = require("express");
 
 // // creates an instance of an Express server
-=======
-// const express = require('express');
->>>>>>> b6daa90edec390a70f9b69e0016a417f0cdd27eb
 // const app = express();
 // const port = 5432;
 
