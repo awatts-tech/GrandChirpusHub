@@ -127,7 +127,11 @@ header{
   }
 
   .title{
+<<<<<<< HEAD
+    font-family: 'Calistoga',sans-serif; 
+=======
     Font-family: 'Calistoga',sans-serif; 
+>>>>>>> f1eae8bef408d216e024984f14f7fe86e81a6fb9
     font-size: 40px;
     color: #03324C;
   }

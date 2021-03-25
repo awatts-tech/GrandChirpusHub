@@ -62,11 +62,12 @@
         background-color: rgb(244,243,241);
         font-size: 14px;
         overflow-y: auto;
-        width: 90%;
+        width: 95%;
         padding-right: 10px;
         height: 400px;
         padding-left: 10px;
-        position: absolute;
+        position: fixed;
+        float: left;
         /* z-index: 9; */
         top: 200px;
     }
@@ -75,6 +76,10 @@
 
     h1{
         font-size: 30px;
+    }
+
+    #close{
+        display: none;
     }
 
     body{
@@ -178,6 +183,10 @@
         font-size: 16px;
     }
 
+    #close{
+        display: none;
+    }
+
     #rightSide {
         height: 55%;
         width: 50%;
@@ -197,7 +206,7 @@
     }
 
     #searchResults{
-        width: 100px; 
+        width: 100%; 
         position: relative; 
         margin: 0;
     }
