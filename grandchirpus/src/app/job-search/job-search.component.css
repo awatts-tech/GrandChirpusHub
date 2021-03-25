@@ -55,6 +55,14 @@
         padding-bottom: 10px;
     }
 
+    #close{
+        display: block;
+    }
+
+    .searchresults2{
+        display: fixed;
+    }
+
     #description{
         display: none;
         padding-top: 20px;
@@ -68,7 +76,6 @@
         padding-left: 10px;
         position: fixed;
         float: left;
-        /* z-index: 9; */
         top: 200px;
     }
 

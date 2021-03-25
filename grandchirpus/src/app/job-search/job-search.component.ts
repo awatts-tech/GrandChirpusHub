@@ -68,7 +68,4 @@ export class JobSearchComponent implements OnInit {
     document.getElementById('description').style.display = 'none';
     console.log('clicked');
   }
-
-
-
 }

@@ -1,43 +1,4 @@
-<<<<<<< HEAD
-const express = require('express');
-const app = express();
-const port = process.env.PORT||3000;
-
-// Add cors here to allow to use across domain
-// names
-// api is now publicly available
-const cors = require("cors");
-app.use(cors());
-
-app.use(express.static(__dirname + "/public"));
-// const routes = require("../routes");
-
-// app.use("/", routes);
-
-// app.listen(port, () => console.log(`Listening on port: ${port}.`));
-
-// const employernetwork = ["Ally Financial", "BCBSM"]
-
-// app.get("./employernetwork", (req, res) => {
-// 	res.json(employernetwork)
-// });
-
-app.listen(port, () => {
-	console.log('Application started...');
-});
-
-
-
-
-
-
-// // server.js
-// const express = require("express");
-
-// // creates an instance of an Express server
-=======
 // const express = require('express');
->>>>>>> f1eae8bef408d216e024984f14f7fe86e81a6fb9
 // const app = express();
 // const port = 5432;
 
