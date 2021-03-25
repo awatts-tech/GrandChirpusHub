@@ -1,4 +1,5 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit, Output} from '@angular/core';
+import { EventEmitter } from 'events';
 import { IndeedService } from '../indeed.service';
 import { JobSearchComponent } from '../job-search/job-search.component';
 
@@ -10,6 +11,7 @@ import { JobSearchComponent } from '../job-search/job-search.component';
 export class JobItemComponent implements OnInit {
 //input import to be able to accept an input from the parent component
 @Input() job;
+@Output() descStyle = new EventEmitter();
 
 //constructor to create an import for the service class/component
 constructor(public careerOneService: IndeedService) { }
@@ -28,6 +30,13 @@ constructor(public careerOneService: IndeedService) { }
 
     //sets the description id in the HTML equal to the jobDesc Variable
     document.getElementById('description').innerHTML = jobDesc;
+
+    document.getElementById('description').style.display = "block";
   }
 
+  close(){
+    document.getElementById('description').innerHTML = '';
+    document.getElementById('description').style.display = 'none';
+    console.log('clicked');
+  }
 }

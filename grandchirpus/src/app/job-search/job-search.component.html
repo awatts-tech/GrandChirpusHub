@@ -20,13 +20,18 @@
         <button id="submit-button" class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
     </div>
 
-    <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
-        <app-job-item [job]="job"></app-job-item> 
-    </div>
-
-    <div class = "searchResults2">
-        <div id='description'>
-            <!-- <span class="close" (click)=closeDesc()>&times;</span> -->
+    <div id="leftSide">
+        <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
+            <app-job-item [job]="job"></app-job-item> 
         </div>
     </div>
+
+    <div id="rightSide">
+        <div class = "searchResults2">
+            <button id='close' (click)= "close()"> &times; </button>
+            <div id='description'>
+                
+            </div>
+        </div>
+    </div>  
     
