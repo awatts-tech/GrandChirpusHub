@@ -1,5 +1,6 @@
 /* Mobile first design */
-  header{
+
+header{
     background-color: #F06639;
     border: 6px solid #03324C;
     font-family: 'Calistoga',sans-serif; 
@@ -10,6 +11,10 @@
     position: fixed; 
     z-index:999;   
     width: 100%;
+  }
+
+  header img {
+    height: 40px;
   }
 
   .title{
