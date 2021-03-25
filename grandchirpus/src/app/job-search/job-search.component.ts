@@ -10,10 +10,6 @@ import { IndeedService } from '../indeed.service';
   providers: [],
 })
 export class JobSearchComponent implements OnInit {
-  modalStyle = 'none';
-  displayModal() {
-    document.getElementById('myModal').style.display = this.modalStyle;
-  }
 
   //these are the fields the user will be able to set in the webpage to run their search
   keyword: string = '';
@@ -59,11 +55,7 @@ export class JobSearchComponent implements OnInit {
   //function to call the API for getting the jobs
   getJobResults() {
     //calls the getJobs API with the 3 search terms we selected
-    this.careerOneService.getJobs(
-      this.keyword,
-      this.jobLocation,
-      this.jobRadius
-    );
+    this.careerOneService.getJobs(this.keyword, this.jobLocation, this.jobRadius);
 
     //sets all of the following variables back to an empty string so they disappear from the search boxes
     this.keyword = '';
@@ -71,15 +63,12 @@ export class JobSearchComponent implements OnInit {
     this.jobRadius = '';
   }
 
-  // When the user clicks on (x), close the window
-  closeDesc() {
+  close(){
+    document.getElementById('description').innerHTML = '';
     document.getElementById('description').style.display = 'none';
+    console.log('clicked');
   }
 
-  // When the user clicks anywhere outside of the modal, close it
-  // window.onclick = function(event) {
-  //   if (event.target == this.modal) {
-  //     this.modal.style.display = "none";
-  //   }
-  // }
+
+
 }
