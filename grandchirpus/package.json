@@ -5,8 +5,8 @@
   "name": "grandchirpus",
   "version": "0.0.0",
   "scripts": {
-    "start": "node server.js",
     "ng": "ng",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
