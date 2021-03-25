@@ -61,17 +61,13 @@ export class InterviewPrepComponent implements OnInit {
     
     i= 0;
 
-
     basicRandom(){   
         const newQuestion = this.basicQuestions[this.i]; 
         console.log(newQuestion);
         document.getElementById('displayBasicQuestions').innerHTML= newQuestion;
-        this.i++; 
-        if(this.i== this.basicQuestions.length){
+        if(this.i == this.basicQuestions.length){
         this.i = 0;
         }
-
-      
       }
 
       basicAnswersRandom(){   
@@ -79,7 +75,7 @@ export class InterviewPrepComponent implements OnInit {
         console.log(newAnswer);
         document.getElementById('displayBasicAnswers').innerHTML= newAnswer;
         this.i++; 
-        if(this.i== this.basicAnswers.length){
+        if(this.i == this.basicAnswers.length){
         this.i = 0;
         }
       }
@@ -90,7 +86,6 @@ export class InterviewPrepComponent implements OnInit {
         const newTechQuestion = this.technicalQuestions[this.j]; 
         console.log(newTechQuestion);
         document.getElementById('displayTechQuestions').innerHTML= newTechQuestion;
-        this.j++; 
         if(this.j== this.technicalQuestions.length){
         this.j = 0;
       } 

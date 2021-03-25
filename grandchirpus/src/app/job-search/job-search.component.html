@@ -8,10 +8,10 @@
             <input type="text" id="setSearchSuggestion" placeholder="Keyword" required name="Keyword" [(ngModel)]="keyword"  class="form-control" />
             </div>
             <div class="col">
-            <input type = "text" placeholder="State (VA) or Zipcode (20191)" required name = "jobLocation" [(ngModel)]="jobLocation" class="form-control" />
+            <input type = "text" id="jobLocation" placeholder="State (VA) or Zipcode (20191)" required name = "jobLocation" [(ngModel)]="jobLocation" class="form-control" />
             </div>
             <div class="col">
-            <input type ="dropdown" placeholder="Radius" name = "jobRadius" [(ngModel)]="jobRadius" class="form-control"/>
+            <input type ="dropdown" id="jobRadius" placeholder="Radius" name = "jobRadius" [(ngModel)]="jobRadius" class="form-control"/>
             </div>
         </div>
     </div>
@@ -20,14 +20,18 @@
         <button id="submit-button" class="btn btn-primary" type="submit" (click)="getJobResults()">Submit</button> 
     </div>
 
-    <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
-        <app-job-item [job]="job"></app-job-item> 
-    </div>
-
-    <div class = "searchResults2">
-        <div id='description'>
-            <!-- <span class="close" (click)=closeDesc()>&times;</span>  -->
+    <div id="leftSide">
+        <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
+            <app-job-item [job]="job"></app-job-item> 
         </div>
     </div>
-    <!-- </div> -->
 
+    <div id="rightSide">
+        <div class = "searchResults2">
+            <button id='close' (click)= "close()"> &times; </button>
+            <div id='description'>
+                
+            </div>
+        </div>
+    </div>  
+    

@@ -1,3 +1,9 @@
+body{
+  background-image: linear-gradient(to bottom left, #bbe3f7,#005a87);
+}
+
+
+
 .basicRandom{
   background-color: #03324C;
   border: 5px solid  #F06639;
@@ -33,7 +39,7 @@
       body { font-family: sans-serif; }
   
   .scene {
-    width: 400px;
+    width: 600px;
     height: 460px;
     border: 1px solid #CCC;
     margin: 40px 0;
@@ -135,21 +141,20 @@
   
   
   .questionsFlipCards{
-    display: flex;
+    display: block;
+    padding: 10px;
+    align-items: center;
   }
   
-  .questionsFlipCards2{
-    display: flex;
-  }
 
   .button-container1{
-    float:  left;
-    padding: 30px;
+   display: inline-flex;
+    padding: 20px;
   }
   
   .button-container2{
-    float:right;
-    padding: 30px;
+  display:  inline-flex;
+    padding: 20px;
   }
   
   
@@ -158,23 +163,103 @@
   
   }  
 
+  img{
+    float:right;
+    padding: 10px;
+    width: 300px;
 
-/* 
+  }
+
+
+  .main1, .main2{
+    display: flex;
+  }
+
+
+  #center{
+      margin: auto;
+      width: 50%;
+    
+  }
+
+  section{
+    padding: 20px;
+  }
+
+  img{
+
+    padding: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+
+    img{ 
+
+      display: none;
+    }
+
+    .questionsFlipCards{
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      padding: 10px;
+      align-items: left;
+
+    }
+
+    section{
+      float: right;
+    }
+   .main1, .main2{
+     flex-wrap: wrap;
+   }
+
+   .card {
+    width: 75%;
+    height: 75%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+  }
   
-@media screen and (max-width: 700px) {
- .card2, img, .card2__face, .card2__face--back, .button-container2 {
+  .card2 {
+    width: 75%;
+    height: 75%;
+  }
 
-  display: none;
- }
+  .scene {
+    width: 300px;
+    border: none;
+    
+  }
 
- .hidden{
+  .questionsFlipCards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
 
-  display: none;
- }
+  .button-container1{
+   display: inline-flex;
+    padding: 20px;
+  }
+  
+  .button-container2{
+  display:  inline-flex;
+    padding: 20px;
+  }
 
- .button-container1, .card{
-   display: block;
- }
+  img{
+    float: center;
+    width: 150px;
+  }
 
-  */
-/* } */
+  .card__face, .card2__face {
+    font-size: 12px;
+  }
+
+  }
