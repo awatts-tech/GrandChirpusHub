@@ -1,3 +1,9 @@
+body{
+  background-image: linear-gradient(to bottom left, #bbe3f7,#005a87);
+}
+
+
+
 .basicRandom{
   background-color: #03324C;
   border: 5px solid  #F06639;
@@ -180,8 +186,18 @@
     padding: 20px;
   }
 
+  img{
+
+    padding: 20px;
+  }
 
   @media only screen and (max-width: 768px) {
+
+
+    img{ 
+
+      display: none;
+    }
 
     .questionsFlipCards{
       display: flex;
