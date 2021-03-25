@@ -5,7 +5,7 @@
     min-height: 100%;
     width: 100%;
     height: auto; 
-    margin:0;
+    margin: 0;
 }  
 #quote{
   padding-top: 50px;
@@ -31,7 +31,6 @@ span{
   text-align: center;
    color: black;
    font-weight: bold;
-   /* padding-right: 130px; */
    font-size: 50px;
    padding-bottom: 20px;
  }
@@ -98,11 +97,11 @@ span{
   padding-right: 10px; 
   background: white;
   width: 450px;
-  } 
+  }  
   
 
 /* TABLET */
-@media screen and (min-width: 768px) {
+ @media screen and (min-width: 768px) {
 
  
   body{
@@ -214,7 +213,7 @@ background: white;
 width: 850px;
 } 
 
-}
+} 
 
 /* DESKTOP */
 @media screen and (min-width: 1200px) {
@@ -261,7 +260,8 @@ width: 850px;
   #grid-container {
     display: grid;
     height: 800px;
-    width: 1000px;
+    width: 70%;
+    /* width:1000px; */
     align-content: space-evenly;
     grid-template-columns: auto auto auto;
     grid-gap: 10px;
@@ -279,7 +279,6 @@ width: 850px;
 }
 
  #Affinity {
-  /* text-align: center;  */
   font-weight: bold;
   font-size: 20px;
 }   
@@ -326,6 +325,6 @@ width: 850px;
   padding-right: 120px;
   background: white;
   width: 850px;
-} 
+}  
 
 } 

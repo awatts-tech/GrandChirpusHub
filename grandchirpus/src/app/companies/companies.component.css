@@ -1,5 +1,4 @@
-
-body{
+body {
     height: 100%;
     margin: 0;
     margin-top: 30px;
@@ -7,6 +6,11 @@ body{
     padding-right: 20px;
     padding-top: 20px;
     background-image: url("/assets/images/park.jpg"); 
+}
+
+.background {
+  
+   opacity: .5;
 }
 
 .wow {
