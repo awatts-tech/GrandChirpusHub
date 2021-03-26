@@ -8,7 +8,7 @@ body{
   align-content: center;
   padding-left: 80px;
   padding-right: 80px;  
-  
+  padding-top: 70px;
 }
 
 .blockquote{
@@ -123,6 +123,7 @@ body{
   padding-right: 80px;
   height: 100%;
   margin: 0;
+  padding-top: 30px;
 }
 .blockquote{
   padding-top: 70px;

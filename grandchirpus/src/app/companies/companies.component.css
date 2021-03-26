@@ -8,6 +8,7 @@ body {
     background-image: url("~src/assets/images/background_comp.png"); 
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 70px;
   }
 
 .display-1{
