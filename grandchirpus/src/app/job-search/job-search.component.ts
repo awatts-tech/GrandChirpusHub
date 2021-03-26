@@ -16,6 +16,9 @@ export class JobSearchComponent implements OnInit {
   jobLocation: string = '';
   jobRadius: string = '';
 
+  jobDesc = '';
+  closed = true;
+
   //array of strings to be shown in the Keyword search on the JobSearch Page
   searchSuggestions = [
     'Try searching for Developer...',
@@ -52,6 +55,12 @@ export class JobSearchComponent implements OnInit {
     )).placeholder = searchTerm;
   }
 
+  setJobDescription(e){
+    this.jobDesc = e;
+    console.log(e);
+    this.closed = false;
+  }
+
   //function to call the API for getting the jobs
   getJobResults() {
     //calls the getJobs API with the 3 search terms we selected
@@ -64,8 +73,6 @@ export class JobSearchComponent implements OnInit {
   }
 
   close(){
-    document.getElementById('description').innerHTML = '';
-    document.getElementById('description').style.display = 'none';
-    console.log('clicked');
+    this.closed = true;
   }
 }

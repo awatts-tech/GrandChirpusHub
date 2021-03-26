@@ -22,15 +22,17 @@
 
     <div id="leftSide">
         <div id="searchResults" *ngFor="let job of careerOneService.jobsList">
-            <app-job-item [job]="job"></app-job-item> 
+            <app-job-item [job]="job" (descStyle)="setJobDescription($event)"></app-job-item> 
         </div>
     </div>
 
     <div id="rightSide">
         <div class = "searchResults2">
-            <!-- <button id='close' (click)= "close()"> &times; </button> -->
-            <button id='close' (click)= "close()"> &times; </button>
-            <div id='description'>
+            
+            <div id='description' *ngIf="!closed">
+                <button id='close' (click)= "close()"> &times; </button>
+                <div [innerHTML] = "jobDesc" ></div>
+                
             </div>
         </div>
     </div>  

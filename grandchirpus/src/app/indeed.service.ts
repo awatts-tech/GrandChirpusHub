@@ -35,7 +35,7 @@ export class IndeedService {
   sortColumns:string = '0';
   sortOrder:string = '0';
   startRow:number = 0; 
-  pageSize:number = 4; 
+  pageSize:number = 50; 
   
   constructor(private http: HttpClient) { }
   

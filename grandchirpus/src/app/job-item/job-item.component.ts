@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output} from '@angular/core';
-import { EventEmitter } from 'events';
+import { EventEmitter } from '@angular/core';
 import { IndeedService } from '../indeed.service';
 import { JobSearchComponent } from '../job-search/job-search.component';
 
@@ -11,7 +11,8 @@ import { JobSearchComponent } from '../job-search/job-search.component';
 export class JobItemComponent implements OnInit {
 //input import to be able to accept an input from the parent component
 @Input() job;
-@Output() descStyle = new EventEmitter();
+@Output() descStyle = new EventEmitter<string>();
+jobDesc = '';
 
 //constructor to create an import for the service class/component
 constructor(public careerOneService: IndeedService) { }
@@ -23,20 +24,8 @@ constructor(public careerOneService: IndeedService) { }
   getFullJobDescription(jobID){
     //call to the JobDescription API
     this.careerOneService.getJobDescription(jobID);
-    // console.log(this.careerOneService.test);
-
-    //sets variable equal to the variable in the service class
-    const jobDesc = this.careerOneService.jobDesc;
-
-    //sets the description id in the HTML equal to the jobDesc Variable
-    document.getElementById('description').innerHTML += jobDesc;
-
-    document.getElementById('description').style.display = "block";
+  
+    //emit the jobDesc to the parent
+    this.descStyle.emit(this.careerOneService.jobDesc);
   }
-
-  // close(){
-  //   document.getElementById('description').innerHTML = '';
-  //   document.getElementById('description').style.display = 'none';
-  //   console.log('clicked');
-  // }
 }

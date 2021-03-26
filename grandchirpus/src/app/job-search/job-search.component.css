@@ -57,18 +57,27 @@
 
     #close{
         display: block;
+        Font-family: 'Calistoga',sans-serif;
+        background-color:  #F06639;
+        border-radius: 5px;
+        float: right;
     }
 
-    .searchresults2{
-        display: fixed;
+    #leftSide{
+        margin-top: 100px;
+        height: 100%;
+        width: 100%;
+        float:left;
+        overflow-x: hidden;
+        padding-top: 20px;
     }
 
     #description{
-        display: none;
         padding-top: 20px;
-        border: 1px solid black;
+        border: 3px solid #F06639;
         background-color: rgb(244,243,241);
-        font-size: 14px;
+        font-family: sans-serif;
+        font-size: 12px;
         overflow-y: auto;
         width: 95%;
         padding-right: 10px;
@@ -77,16 +86,14 @@
         position: fixed;
         float: left;
         top: 200px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
 @media screen and (min-width: 768px) {
 
     h1{
         font-size: 30px;
-    }
-
-    #close{
-        display: none;
     }
 
     body{
@@ -116,21 +123,24 @@
     }
 
     #rightSide {
-        height: 40%;
+        height: 70%;
         width: 50%;
-        position: fixed;
+        position: absolute;
         right: 15px;
         overflow-x: hidden;
         float:right;
+        padding-bottom: 20px;
     }
 
     #leftSide{
+        margin-top: 0px;
         height: 65%;
         width: 45%;
         float:left;
         overflow-x: hidden;
         padding-top: 20px;
         overflow-y: scroll; 
+        
     }
 
     #searchResults{
@@ -140,14 +150,15 @@
     }
 
     #description{
-        display: none;
-        font-size: 12px;
+        font-size: 14px;
         overflow-y: auto;
-        padding-right: 20%;
+        padding-right: 20px;
         height: 100%;
-        /* z-index: 9; */
+        width: 100%;
         padding-left: 10px;
         top:unset;
+        font-family: sans-serif;
+        position:unset;
     }
 
 }
@@ -169,10 +180,6 @@
     #inputs{
         flex-direction: row;
     }
-    
-    /* .col{
-        padding-left: 0px;
-    } */
 
     #setSearchSuggestion{
         font-size: 16px;
@@ -190,22 +197,20 @@
         font-size: 16px;
     }
 
-    #close{
-        display: none;
-    }
-
     #rightSide {
-        height: 55%;
+        height: 70%;
         width: 50%;
-        position: fixed;
+        position: absolute;
         right: 150px;
         overflow-x: hidden;
         float:right;
+        padding-bottom: 40px;
     }
 
     #leftSide{
+        margin-top: 0px;
         height: 60%;
-        width: 30%;
+        width: 35%;
         float:left;
         overflow-x: hidden;
         padding-top: 20px;
@@ -219,15 +224,17 @@
     }
 
     #description{
-        display: none;
-        font-size: 12px;
+        font-size: 16px;
         overflow-y: auto;
         padding-right: 20px;
         height: 100%;
+        width: 100%;
         /* z-index: 9; */
         padding-left: 10px;
         top:unset;
+        font-size: 16px;
+        font-family: sans-serif;
+        position:unset;
     }
 
 }
-
