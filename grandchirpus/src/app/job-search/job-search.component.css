@@ -72,6 +72,10 @@
         padding-top: 20px;
     }
 
+    .grant{
+        display: none;
+    }
+
     #description{
         padding-top: 20px;
         border: 3px solid #F06639;
@@ -122,6 +126,16 @@
         font-size: 16px;
     }
 
+    .grant{
+        display: block;
+        width: 60%;
+    }
+
+    .grant > img{
+        width: 550px;
+        height: auto;
+    }
+
     #rightSide {
         height: 70%;
         width: 50%;
@@ -129,18 +143,17 @@
         right: 15px;
         overflow-x: hidden;
         float:right;
-        padding-bottom: 20px;
+        padding-bottom: 100px;
     }
 
     #leftSide{
         margin-top: 0px;
-        height: 65%;
+        height: 100%;
         width: 45%;
         float:left;
         overflow-x: hidden;
         padding-top: 20px;
         overflow-y: scroll; 
-        
     }
 
     #searchResults{
@@ -153,14 +166,13 @@
         font-size: 14px;
         overflow-y: auto;
         padding-right: 20px;
-        height: 100%;
+        height: 85%;
         width: 100%;
         padding-left: 10px;
         top:unset;
         font-family: sans-serif;
-        position:unset;
+        position:absolute;
     }
-
 }
 
 @media screen and (min-width: 1200px){
@@ -197,6 +209,15 @@
         font-size: 16px;
     }
 
+    .grant{
+        display: block;
+    }
+
+    .grant > img{
+        width: auto;
+        height: auto;
+    }
+
     #rightSide {
         height: 70%;
         width: 50%;
@@ -204,12 +225,12 @@
         right: 150px;
         overflow-x: hidden;
         float:right;
-        padding-bottom: 40px;
+        padding-bottom: 80px;
     }
 
     #leftSide{
         margin-top: 0px;
-        height: 60%;
+        height: 70%;
         width: 35%;
         float:left;
         overflow-x: hidden;
@@ -227,14 +248,13 @@
         font-size: 16px;
         overflow-y: auto;
         padding-right: 20px;
-        height: 100%;
+        height: 95%;
         width: 100%;
-        /* z-index: 9; */
         padding-left: 10px;
         top:unset;
         font-size: 16px;
         font-family: sans-serif;
-        position:unset;
+        position:absolute;
     }
 
 }

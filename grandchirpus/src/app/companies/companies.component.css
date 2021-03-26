@@ -7,7 +7,9 @@ body {
     padding-top: 40px;
     background-image: url("~src/assets/images/background_comp.png"); 
     background-repeat: no-repeat;
+    background-position: center;
   }
+
 .display-1{
     font-size: 50px;
     color: #F06639;
