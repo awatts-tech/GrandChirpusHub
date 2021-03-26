@@ -29,14 +29,14 @@ constructor(public careerOneService: IndeedService) { }
     const jobDesc = this.careerOneService.jobDesc;
 
     //sets the description id in the HTML equal to the jobDesc Variable
-    document.getElementById('description').innerHTML = jobDesc;
+    document.getElementById('description').innerHTML += jobDesc;
 
     document.getElementById('description').style.display = "block";
   }
 
-  close(){
-    document.getElementById('description').innerHTML = '';
-    document.getElementById('description').style.display = 'none';
-    console.log('clicked');
-  }
+  // close(){
+  //   document.getElementById('description').innerHTML = '';
+  //   document.getElementById('description').style.display = 'none';
+  //   console.log('clicked');
+  // }
 }
